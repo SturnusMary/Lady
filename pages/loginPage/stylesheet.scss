@@ -1,0 +1,35 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+main {
+    @include flex-jc-center;
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    .motto {
+        z-index: -1;
+        margin-bottom: 34px;
+    }
+   
+    .checkboxBlock {
+        width: $inputWidth;
+        @include flex-ai-center;
+        justify-content: space-between;
+        margin-bottom: 34px;
+        
+        a{
+            font-size: 8px;
+            line-height: 13px;
+        }
+    }
+}
+
+.startPage-content {
+    button {
+        margin-bottom: 65px;
+    }
+}

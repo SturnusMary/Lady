@@ -1,0 +1,43 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.social-template {
+    @include flex-ai-center;
+    flex-direction: column;
+
+    p{
+        display: inline-block;
+        color: $linkPinkColor;
+        font-size: 14px;
+        line-height: 21px;
+        margin-bottom: 17px;
+    }
+
+    &-network{
+        @include flex-jc-between;
+        width: 145px;
+        
+        div{
+            @include flex-ai-center;
+            justify-content: center;
+            width: 34.5px;
+            height: 34.5px;
+            border-radius: 70px;
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.16);
+            background-color: #385C8E;
+
+            svg{
+                fill: white;
+            }
+        }
+
+        div:nth-child(2){
+            background-color: #76A9EA;
+        }
+
+        div:last-child{
+            background-color: #F34A38;
+        }
+    }
+}

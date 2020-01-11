@@ -1,0 +1,39 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.mainPage-content {
+    justify-content: flex-start;
+    margin-top: 51px;
+
+    .banner-block{
+        a {
+            color: white;
+            display: flex;
+            position: relative;
+            line-height: 35px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            h2{
+                padding: 0 10px 0 10px;
+                background-color: $logoColor;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+            }
+            
+            div{
+                border-radius: 0px 0 0 15px;
+                padding: 0 10px 0 10px;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                background-color: $contentColor;
+            }
+        }
+    }
+}

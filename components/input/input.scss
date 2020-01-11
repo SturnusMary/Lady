@@ -1,0 +1,61 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+input[type='password'] {
+    color: $formTextColor;
+    font-size: 0.3em !important;
+    line-height: 4em !important;
+	font-family: "fontello";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    letter-spacing: 1px;
+}
+
+.input-template {
+    @include flex-d-column;
+    position: relative;
+    margin-bottom: 13px;
+
+    label {
+        font-size: 9px;
+        line-height: 13px;
+        margin-bottom: 5px;
+    }
+
+    input {
+        color: $formTextColor;   
+        width: $inputWidth;
+        height: $inputHeight;
+        border-radius: $mainBorderR;
+        box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.05);
+        padding-left: 13px;
+        position: relative;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    input:disabled{
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    &__icon {
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: 49px;
+        width: 38px;
+        bottom: 1px;
+        right: 1.5px;
+        border-radius: $mainBorderR;
+
+        .validationOfPassword {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+    }
+}

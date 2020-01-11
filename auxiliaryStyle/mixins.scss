@@ -1,0 +1,47 @@
+@mixin flex-jc-center {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flex-ai-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-d-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-jc-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin background-i {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@mixin svg-fill-static {
+    transition: all 0.4s;
+    fill: $contentColor;
+    stroke: none;
+}
+
+@mixin svg-fill-hover {
+    transition: all 0.4s;
+    fill: $linkPinkColor;
+    stroke: none;
+}
+
+@mixin svg-stroke-static {
+    transition: all 0.4s;
+    stroke: $contentColor;
+}
+
+@mixin svg-stroke-hover {
+    transition: all 0.4s;
+    stroke: $linkPinkColor;
+}

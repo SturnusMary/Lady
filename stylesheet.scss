@@ -1,0 +1,59 @@
+@import './auxiliaryStyle/variable.scss';
+@import './auxiliaryStyle/fonts.scss';
+@import './auxiliaryStyle/mixins.scss';
+@font-face {
+    font-family: 'fontello';
+    src: url('./auxiliaryStyle/font/fontello.eot');
+    src: url('./auxiliaryStyle/font/fontello.eot') format('embedded-opentype'),
+         url('./auxiliaryStyle/font/fontello.woff2') format('woff2'),
+         url('./auxiliaryStyle/font/fontello.woff') format('woff'),
+         url('./auxiliaryStyle/font/fontello.ttf') format('truetype'),
+         url('./auxiliaryStyle/font/fontello.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*, :after, :before {
+    font-family: $mainFont;
+    background-color: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style:none; 
+}
+
+body, #root, .container{
+    height: 100vh;
+    color: $formTextColor;
+    // overflow-y: auto;
+    // overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+a{
+   text-decoration: none;  
+   color: $formTextColor;       
+}
+
+button{
+    outline: none;
+    border: none;
+    background: none;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar{
+    width: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: $linkPinkColor; 
+}
+
+
+

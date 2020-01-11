@@ -1,0 +1,75 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+header {
+    @include flex-jc-center;
+    height: 51px;
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    align-items: center;
+    
+    .wrapper-header{
+        @include flex-ai-center;
+        justify-content: space-between;
+        width: 73vw;
+
+        .logo {
+            font-family: $logoFont;
+            color: $logoColor;
+            font-size: 23px;
+            padding: 5px;
+        }
+
+        .menu-btn{
+            z-index: 4;
+            position: relative;
+            width: 30px;
+            height: 30px;
+
+            span,
+            span::before,
+            span::after {
+                position: absolute;
+                top: 50%;
+                margin-top: -0.5px;
+                left: 50%;
+                margin-left: -10px;
+                width: 20px;
+                height: 1px;
+                background-color: #707070;
+            }
+
+            span::before,
+            span::after {
+                content: '';
+                transition: 0.4s;
+            }
+
+            span::after {
+                transform: translateY(-5px);
+            }
+
+            span::before {
+                transform: translateY(5px);
+            }
+        }
+
+        .menu-btn_active {
+            span::before {
+                transform: rotate(45deg);
+            }
+            span::after {
+                transform: rotate(-45deg);
+            }
+            span {
+                height: 0;
+            }
+        }
+    }
+  
+}

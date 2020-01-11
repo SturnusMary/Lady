@@ -1,0 +1,44 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+footer {
+    @include flex-ai-center;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    height: 51px;
+    background-color: white;
+
+    .wrapper-footer, #navBar, .navBar-content  {
+        width: 100%;
+        height: 100%;
+    }
+  
+    .navBar-content {
+        @include flex-ai-center;
+        justify-content: space-around;
+       
+        &__icon {
+            height: 26px;
+
+            svg {
+                @include svg-stroke-static; 
+            }
+            .onlyStroke {
+                @include svg-fill-static;
+            }
+        }
+
+        &__icon a:hover, .active {
+            
+            svg {
+                @include svg-stroke-hover;
+            }
+            .onlyStroke {
+                @include svg-fill-hover;
+            }
+        }
+    }
+}

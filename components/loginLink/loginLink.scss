@@ -1,0 +1,16 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.loginSignup-template {
+    @include flex-d-column;
+    margin-top: 35px;
+    margin-bottom: 37px;
+    align-items: center;
+    font-size: 12px;
+    line-height: 18px;
+   
+    a{
+        color: $linkPinkColor;
+    }
+}

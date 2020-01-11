@@ -1,0 +1,13 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.signupPage-content {
+    
+    .prompt {
+        width: $inputWidth;
+        margin-bottom: 24px;
+        font-size: 8px;
+        line-height: 12px;
+    }
+}

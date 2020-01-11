@@ -1,0 +1,31 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.wrapper-loader {
+    @include flex-jc-center;
+    @include background-i;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    align-items: flex-end;
+    padding-bottom:  12vh;
+    background-image: url(../../img/loaderback.jpg);
+    transform: translateX(0%);
+    animation-name: disappear;
+    animation-duration: 4s;
+    transition: ease-in-out;
+}
+
+@keyframes disappear {
+
+    70% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-150%);
+    }
+}

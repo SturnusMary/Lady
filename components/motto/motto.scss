@@ -1,0 +1,99 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.motto {
+    width: 163px;
+    position: relative;
+    margin-left: 0;
+
+    h2{
+        font-family: $logoFont;
+        color: $logoColor;
+        font-size: 80px;
+        font-weight: normal;
+    }
+
+    p {
+        font-family: $logoFont;
+        position: absolute;
+        color: $contentColor;
+        font-size: 15px;
+        bottom: 15px;
+        left: 0;
+        right: 0;
+    }
+  
+    .cls-1, .cls-3, .cls-4 {
+        fill: none;
+    }
+    
+    .cls-2 {
+        clip-path: url(#clip-path);
+    }
+    .cls-5 {
+        clip-path: url(#clip-path-2);
+    }
+    
+    .cls-3, .cls-4 {
+        stroke: $logoColor;
+        stroke-miterlimit: 10;
+    }
+    
+    .cls-3 {
+        stroke-width: 4px;
+    }
+    
+    .cls-4 {
+        stroke-width: 4px;  
+    }
+    @media (min-width: 700px) and (max-width: 1024px){
+        transform: scale(1.5);
+    }
+}
+
+.motto-animation {
+    #ady1, #ady2, #ady3, #ady4, #ady5, #ady6, #l1, #l2{
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+        stroke-width: 4px;
+    } 
+
+    #l1{
+        animation: text 1s linear forwards;
+    }
+
+    #l2{
+        animation: text 1s linear forwards 0.55s;
+    }
+
+    #ady1{
+        animation: text 1s linear forwards 0.9s;
+    }
+
+    #ady2{
+        animation: text 1s linear forwards 1.1s;
+    }
+
+    #ady3{
+        animation: text 1s linear forwards 1.2s;
+    }
+    #ady4{
+        animation: text 1s linear forwards 1.6s;
+    }
+
+    #ady5 {
+        animation: text 1s linear forwards 1.8s;
+    }
+
+    #ady6 {
+        animation: text 1s linear forwards 2.2s;
+    }
+}
+
+@keyframes text {
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
