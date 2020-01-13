@@ -49,11 +49,11 @@
                 }
             }
 
-            .nav-element a:hover, .active {
+            .nav-element a:hover, .nav-element .active {
                 transition: all 0.4s;
                 color: $linkPinkColor;
 
-                svg {
+                .nav-element-icon svg {
                     @include svg-fill-hover;
                 }
             }

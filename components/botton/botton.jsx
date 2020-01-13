@@ -13,7 +13,7 @@ export class Botton extends React.Component {
         const{children, allValidated} = this.props;
         return(
             <div className='button-template'>
-                <button disabled={!allValidated}  onClick={this.onClick}  >{children}</button>
+                <button disabled={!allValidated}  onClick={this.onClick}>{children}</button>
             </div>
         )
     }

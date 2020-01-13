@@ -45,7 +45,6 @@ export class LoginPage extends React.Component {
     }
 
     render(){
-        //console.log(this.state);
         const {inputEmail, valueHide, inputPassword} = this.state;
         const {isLoading, scroll} = this.props;
         

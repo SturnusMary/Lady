@@ -40,14 +40,11 @@
         stroke-miterlimit: 10;
     }
     
-    .cls-3 {
+    .cls-3, .cls-4 {
         stroke-width: 4px;
     }
     
-    .cls-4 {
-        stroke-width: 4px;  
-    }
-    @media (min-width: 700px) and (max-width: 1024px){
+    @media (min-width: 700px) and (max-width: 993px){
         transform: scale(1.5);
     }
 }
@@ -78,6 +75,7 @@
     #ady3{
         animation: text 1s linear forwards 1.2s;
     }
+    
     #ady4{
         animation: text 1s linear forwards 1.6s;
     }

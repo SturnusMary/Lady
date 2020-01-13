@@ -1,0 +1,141 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.prevCard-wrapper {
+    width: 350px;
+    height: 145px;
+    background-color: white;
+    box-shadow: -4px 4px 12px 0px rgba(0, 0, 0, 0.16);
+    padding: 20px 25px;
+    margin-bottom: 20px;
+
+    @media (min-width: 700px) and (max-width: 720px){
+        padding: 15px 20px;
+        width: 340px;
+        height: 135px;
+    }
+
+    @media (min-width: 320px) and (max-width: 355px){
+        padding: 5px 10px;
+        width: 320px;
+        height: 115px;
+        margin-bottom: 10px;
+    }
+
+    .prevCard{
+        display: flex;
+        width: 100%;
+        height: 100%;
+
+        .prevCard-img {
+            width: 125px;
+            height: 105px;
+
+            &-wrapper{
+                @include flex-jc-center;
+                align-items: center;
+
+                img {
+                    height: auto;
+                    width: auto;
+                }
+            }
+        }
+        
+        .prevCard-text {
+            margin-left: 15px;
+            position: relative;
+
+            .bookmark {
+                position: absolute;
+                right: 0;
+                top: 3px;
+
+                svg{
+                    fill: $linkPinkColor;
+                }
+            }
+
+            h3{
+                font-size: 15px;
+                line-height: 23px;
+                color: $linkPinkColor;
+                margin-bottom: 8px;
+            }
+
+            p {
+                font-size: 8px;
+                line-height: 12px;
+                margin-bottom: 10px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-line-clamp: 4;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                min-height: 46px;
+            }
+           
+
+            .tabBar {
+                @include flex-jc-between;
+                align-items: center;
+                height: 12px;
+               
+                &-item{
+                    display: flex;
+                    align-items: flex-end;
+                    transition: all 0.4s;
+
+                    span {
+                        margin-left: 5px;
+                        font-size: 6px;
+                        line-height: 9px;
+                    }
+
+                    svg {
+                        transition: all 0.4s;
+                        fill: $formTextColor;
+                    }
+                }
+                
+                &-item:hover {
+                    color: $linkPinkColor;
+                    transition: all 0.4s;
+
+                    svg {
+                        @include svg-fill-hover;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+.separator {
+    position: relative;
+}
+
+.separator::before,
+.separator::after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background-color: $formTextColor;
+}
+
+.separator::before {
+    left: -13px;
+}
+
+.separator::after {
+    right: -17px;
+}
+
+
+.prevCard-wrapper:nth-child(odd){
+    @media (min-width: 700px) and (max-width: 992px){
+        margin-right: 20px;
+    }
+}

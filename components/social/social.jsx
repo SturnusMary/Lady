@@ -2,14 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './social.scss';
 
-
 export class Social extends React.Component {
-    constructor(props){
-        super(props);
-    }
-   
+
     render(){
-        
         return(
             <div className='social-template'>
                 <p>Social login</p>
@@ -40,5 +35,5 @@ export class Social extends React.Component {
     }
 }
 
-Social.propTypes = {
-};
+// Social.propTypes = {
+// };

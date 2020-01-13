@@ -48,9 +48,7 @@ export class SignupPage extends React.Component {
             },
         });   
     }
-   componentDidMount(){
-        pageYOffset = 0;
-   }
+
     onClickValueHide(valueHide){
         this.setState({
             valueHide,
@@ -58,7 +56,6 @@ export class SignupPage extends React.Component {
     }
 
     render(){
-        // console.log(this.state);
         const {valueHide, inputEmail2, inputPasswordRep, inputName, inputUsername, inputPassword1} = this.state;
         const {scroll} = this.props;
         

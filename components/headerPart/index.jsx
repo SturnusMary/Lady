@@ -28,12 +28,14 @@ export class Header extends React.Component {
 
     render(){
         const{activeBtn} = this.state;
-        const{scroll} = this.props;
+        const{scroll, title} = this.props;
+        
         return (
             <React.Fragment>
-                <header style={{background: scroll ? 'rgba(255, 255, 255, 0.859)' : 'white'}}>
+                <header style={{background: scroll ? 'rgba(255, 255, 255, 0.919)' : 'white'}}>
                     <div className='wrapper-header'>
                         <NavLink to='/'><div className='logo'>Lady</div></NavLink>
+                        <span>{title}</span>
                         <button className={activeBtn === 'start' ? 'menu-btn' : !activeBtn ? 'menu-btn menu-btn_active' : 'menu-btn'} onClick={this.handlerClick}>
                             <span></span>
                         </button>

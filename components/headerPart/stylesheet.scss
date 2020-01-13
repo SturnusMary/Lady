@@ -16,13 +16,19 @@ header {
     .wrapper-header{
         @include flex-ai-center;
         justify-content: space-between;
-        width: 73vw;
+        width: 85vw;
 
         .logo {
             font-family: $logoFont;
             color: $logoColor;
             font-size: 23px;
             padding: 5px;
+        }
+
+        span {
+            font-size: 18px;
+            line-height: 27px;
+            color: $linkPinkColor;
         }
 
         .menu-btn{
