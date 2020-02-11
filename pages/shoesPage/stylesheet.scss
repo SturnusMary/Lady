@@ -7,12 +7,9 @@
     margin-top: 72px;
     align-items: center;
 
-    @media (min-width: 700px) and (max-width: 993px){
+    @media (min-width: 645px) and (max-width: 993px){
        flex-direction: row;
        flex-wrap: wrap;
        justify-content: center;
     }
-    // @media (min-width: 700px) and (max-width: 720px){
-    //     justify-content: space-between;
-    // }
 }

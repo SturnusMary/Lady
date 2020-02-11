@@ -26,6 +26,7 @@ footer {
             svg {
                 @include svg-stroke-static; 
             }
+
             .onlyStroke {
                 @include svg-fill-static;
             }
@@ -36,6 +37,7 @@ footer {
             svg {
                 @include svg-stroke-hover;
             }
+
             .onlyStroke {
                 @include svg-fill-hover;
             }

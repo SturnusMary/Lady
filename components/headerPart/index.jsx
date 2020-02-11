@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import {HeaderNav} from './headerNav/index'
+import {HeaderNav} from './headerNav/index';
 import './stylesheet.scss';
 
 export class Header extends React.Component {
@@ -28,15 +28,15 @@ export class Header extends React.Component {
 
     render(){
         const{activeBtn} = this.state;
-        const{scroll, title} = this.props;
+        const{title} = this.props;
         
         return (
             <React.Fragment>
-                <header style={{background: scroll ? 'rgba(255, 255, 255, 0.919)' : 'white'}}>
+                <header>
                     <div className='wrapper-header'>
-                        <NavLink to='/'><div className='logo'>Lady</div></NavLink>
-                        <span>{title}</span>
-                        <button className={activeBtn === 'start' ? 'menu-btn' : !activeBtn ? 'menu-btn menu-btn_active' : 'menu-btn'} onClick={this.handlerClick}>
+                        <NavLink aria-label="home page" to='/'><div className='logo'>Lady</div></NavLink>
+                        <NavLink aria-label={`${title} page`} to={`/${title}`}><span>{title}</span></NavLink>
+                        <button aria-label="menu" className={activeBtn === 'start' ? 'menu-btn' : !activeBtn ? 'menu-btn menu-btn_active' : 'menu-btn'} onClick={this.handlerClick}>
                             <span></span>
                         </button>
                     </div>

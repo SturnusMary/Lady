@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './stylesheet.scss';
+import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
 import {Header} from '../../components/headerPart/index';
 import {Input} from '../../components/input/input';
 import {Checkbox} from '../../components/checkbox/checkbox';
@@ -8,7 +9,6 @@ import {Botton} from '../../components/botton/botton';
 import {Social} from '../../components/social/social';
 import {LoginLink} from '../../components/loginLink/loginLink';
 import {Motto} from '../../components/motto/motto';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
 
 export class LoginPage extends React.Component {
     constructor(props){
@@ -46,7 +46,6 @@ export class LoginPage extends React.Component {
 
     render(){
         const {inputEmail, valueHide, inputPassword} = this.state;
-        const {isLoading, scroll} = this.props;
         
         if(inputEmail.valid && inputPassword.valid){
             this.allValidated = true;
@@ -55,8 +54,8 @@ export class LoginPage extends React.Component {
         return (
             <React.Fragment>
                 <ScrollToTop />
-                <Header scroll={scroll}/>
-                <main className='startPage-content' style={{display: isLoading ? 'none': 'flex'}}>
+                <Header />
+                <main className='startPage-content'>
                     <Motto />
                     <form>
                         <Input 
@@ -92,5 +91,5 @@ export class LoginPage extends React.Component {
 }
 
 LoginPage.propTypes = {
-    scroll: PropTypes.bool,
+
 };

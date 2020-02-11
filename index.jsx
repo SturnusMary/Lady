@@ -10,47 +10,36 @@ import {JewelryPage} from './pages/jewelryPage/index';
 import {ClothingPage} from './pages/clothingPage/index';
 import {SportsPage} from './pages/sportsPage/index';
 import {CardPage} from './pages/cardPage/index';
+import {NewPage} from './pages/newPage/index';
+import {SalePage} from './pages/salePage/index';
 import './stylesheet.scss';
 
 class App extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            height: window.innerHeight, 
             width: window.innerWidth,
             isLoading: true,
-            scroll: false,
+            newList: [],
+            saleList: [],
         }
         this.forResizeGetData = this.forResizeGetData.bind(this);
-        this.forScrollGetData = this.forScrollGetData.bind(this);
-        this.onLoad =  this.onLoad.bind(this);
+        this.onLoad = this.onLoad.bind(this);
+        this.onGetNewList = this.onGetNewList.bind(this);
+        this.onGetSaleList = this.onGetSaleList.bind(this);
     }
 
-    onLoad(){  this.setState({isLoading: false})}
+    onLoad(){this.setState({isLoading: false})}
+    onGetNewList(newList){this.setState({newList,})}
+    onGetSaleList(saleList){this.setState({saleList,})}
 
     componentDidMount(){
         this.timerID = setTimeout(this.onLoad, 4000);
         window.addEventListener('resize', this.forResizeGetData);
-        window.addEventListener('scroll', this.forScrollGetData);
     }
 
     componentWillUnmount(){
         window.removeEventListener('resize', this.forResizeGetData);
-        window.addEventListener('scroll', this.forScrollGetData);
-    }
-
-    forScrollGetData(){
-        this.status = false;
-        if(pageYOffset > 0){
-            this.status = true;
-        }
-
-        if(this.status != this.rscrollState) {
-            this.setState({
-                scroll: this.status,
-            });
-        }
-        this.rscrollState = this.status;
     }
 
     forResizeGetData(){
@@ -61,7 +50,6 @@ class App extends React.Component {
 
         if(this.status != this.resizeState) {
             this.setState({
-                height: window.innerHeight, 
                 width: window.innerWidth,
             });
         }
@@ -69,22 +57,24 @@ class App extends React.Component {
     }
 
     render(){
-        const {isLoading, width, scroll} = this.state;
-
+        const {isLoading, width, newList, saleList} = this.state;
+      
         if(width < 993){
             return (
                 <BrowserRouter>
                     <div className='app'>
                         <Switch>
-                            <Route exact path='/' render={(props)=><MainPage isLoading={isLoading} scroll={scroll} {...props}/>} />
-                            <Route exact path='/login' render={(props)=><LoginPage scroll={scroll} {...props}/>} />
-                            <Route exact path='/signup' render={(props)=><SignupPage scroll={scroll} {...props}/>}/>
-                            <Route exact path='/shoes' render={(props)=><ShoesPage scroll={scroll} {...props}/>}/>
-                            <Route exact path='/bags' render={(props)=><BagsPage scroll={scroll} {...props}/>}/>
-                            <Route exact path='/jewelry' render={(props)=><JewelryPage scroll={scroll} {...props}/>}/>
-                            <Route exact path='/clothing' render={(props)=><ClothingPage scroll={scroll} {...props}/>}/>
-                            <Route exact path='/sports' render={(props)=><SportsPage scroll={scroll} {...props}/>}/>
-                            
+                            <Route exact path='/' render={(props)=><MainPage onGetList={this.onGetNewList}  onGetSaleList={this.onGetSaleList} isLoading={isLoading}{...props}/>} />
+                            <Route exact path='/login' render={(props)=><LoginPage  {...props}/>} />
+                            <Route exact path='/signup' render={(props)=><SignupPage  {...props}/>}/>
+                            <Route exact path='/shoes' render={(props)=><ShoesPage {...props}/>}/>
+                            <Route exact path='/bags' render={(props)=><BagsPage {...props}/>}/>
+                            <Route exact path='/jewelry' render={(props)=><JewelryPage {...props}/>}/>
+                            <Route exact path='/clothing' render={(props)=><ClothingPage  {...props}/>}/>
+                            <Route exact path='/sports' render={(props)=><SportsPage {...props}/>}/>
+                            <Route exact path='/new' render={(props)=><NewPage list={newList} {...props}/>}/>
+                            <Route exact path='/sale' render={(props)=><SalePage list={saleList} {...props}/>}/>
+
                             <Route path='/shoes/:id' component={CardPage}/>
                             <Route path='/bags/:id' component={CardPage}/>
                             <Route path='/jewelry/:id' component={CardPage}/>
@@ -108,5 +98,3 @@ ReactDOM.render(
     </div>,
    document.getElementById('root')
 );
-
-

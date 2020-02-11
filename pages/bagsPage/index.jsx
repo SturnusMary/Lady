@@ -9,12 +9,11 @@ import images from '../../img/bags/*.jpg';
 
 export function BagsPage (props) {
     const bdOfBags = bd.bags;
-    const {scroll} = props;
 
     return (
         <React.Fragment>
             <ScrollToTop />
-            <Header scroll={scroll} title='Bags'/>
+            <Header title='Bags'/>
             <div className='Page-content'>
                 {bdOfBags.map(item => (
                     <PreviewCard category={item.category} key={item.id} id={item.id} src={images[`${item.id}`]} title={item.title} description = {item.description}/>
@@ -26,5 +25,4 @@ export function BagsPage (props) {
 }
 
 BagsPage.propTypes = {
-    scroll: PropTypes.bool,
 };

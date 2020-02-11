@@ -1,0 +1,27 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.carousel-wrapper {
+    height: auto;
+    width: 100%;
+
+    .carousel-item {
+        width: 100%;
+        height: auto;
+
+        @include flex-jc-center;
+        align-items: center;
+        overflow: hidden;
+
+        .carousel-item-wrapper{
+            @include flex-jc-center;
+            align-items: center;
+
+            img {
+                height: auto;
+                width: 110%;
+            }
+        }
+    }
+}

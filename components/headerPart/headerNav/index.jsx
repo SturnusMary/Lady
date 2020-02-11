@@ -15,7 +15,7 @@ export class HeaderNav extends React.Component {
                         <nav id='nav'>
                             <ul className='nav-content'>
                                 <li className='nav-element'>
-                                    <NavLink to='/shoes'>
+                                    <NavLink aria-label="shoes page" to='/shoes'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="20px" height="17px">
@@ -27,7 +27,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/bags'>
+                                    <NavLink aria-label="bags page" to='/bags'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="18px" height="17px">
@@ -51,7 +51,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/jewelry'>
+                                    <NavLink aria-label="jewelry page" to='/jewelry'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="20px" height="17px">
@@ -77,7 +77,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/clothing'>
+                                    <NavLink aria-label="clothing page" to='/clothing'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="15px" height="18px">
@@ -89,7 +89,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/sports'>
+                                    <NavLink aria-label="sports page" to='/sports'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="18px" height="17px">
@@ -101,7 +101,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/login'>
+                                    <NavLink aria-label="login page" to='/login'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="17px" height="17px">
@@ -115,7 +115,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/signout'>
+                                    <NavLink aria-label="signout page"  to='/signout'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="17px" height="17px">
@@ -129,7 +129,7 @@ export class HeaderNav extends React.Component {
                                     </NavLink>
                                 </li>
                                 <li className='nav-element'>
-                                    <NavLink to='/settings'>
+                                    <NavLink aria-label="settings page" to='/settings'>
                                         <div className='nav-element-icon'>
                                             <svg 
                                                 width="17px" height="17px">

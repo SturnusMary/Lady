@@ -10,19 +10,23 @@
     padding: 20px 25px;
     margin-bottom: 20px;
 
-    @media (min-width: 700px) and (max-width: 720px){
-        padding: 15px 20px;
-        width: 340px;
-        height: 135px;
-    }
-
-    @media (min-width: 320px) and (max-width: 355px){
+    @media (min-width: 320px) and (max-width: 355px), (min-width: 645px) and (max-width: 699px) {
         padding: 5px 10px;
         width: 320px;
         height: 115px;
         margin-bottom: 10px;
     }
 
+    @media (min-width: 645px) and (max-width: 649px){
+        margin-bottom: 5px;
+    }
+
+    @media (min-width: 700px) and (max-width: 720px){
+        padding: 15px 20px;
+        width: 340px;
+        height: 135px;
+    }
+    
     .prevCard{
         display: flex;
         width: 100%;
@@ -47,6 +51,13 @@
             margin-left: 15px;
             position: relative;
 
+            &-title {
+                font-size: 18px;
+                color: $linkPinkColor;
+                line-height: 18px;
+                margin-bottom: 10px;
+            }
+
             .bookmark {
                 position: absolute;
                 right: 0;
@@ -59,47 +70,65 @@
 
             h3{
                 font-size: 15px;
-                line-height: 23px;
                 color: $linkPinkColor;
                 margin-bottom: 8px;
             }
 
-            p {
+            p{
                 font-size: 8px;
                 line-height: 12px;
-                margin-bottom: 10px;
+            }
+            
+            .crop-text {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 -webkit-line-clamp: 4;
                 display: -webkit-box;
                 -webkit-box-orient: vertical;
                 min-height: 46px;
+                margin-bottom: 10px;
             }
            
-
             .tabBar {
-                @include flex-jc-between;
-                align-items: center;
+                display: flex;
                 height: 12px;
-               
+
                 &-item{
                     display: flex;
-                    align-items: flex-end;
                     transition: all 0.4s;
+                    width: 33.3%;
+                   
+                    button {
+                        @include  flex-ai-center;
 
-                    span {
-                        margin-left: 5px;
-                        font-size: 6px;
-                        line-height: 9px;
+                        span {
+                            margin-left: 5px;
+                            font-size: 6px;
+                            line-height: 11px;
+                        }
+    
+                        svg {
+                            transition: all 0.4s;
+                            fill: $formTextColor;
+                        }
                     }
-
-                    svg {
-                        transition: all 0.4s;
-                        fill: $formTextColor;
-                    }
+                  
                 }
-                
-                &-item:hover {
+
+                &-item:first-child   {
+                    justify-content: flex-start;
+                }
+
+                &-item:nth-child(2)   {
+                    justify-content: center;
+                    position: relative;
+                }
+
+                &-item:last-child   {
+                    justify-content: flex-end;
+                }
+
+                &-item:hover button{
                     color: $linkPinkColor;
                     transition: all 0.4s;
 
@@ -112,30 +141,36 @@
     }
 }
 
-.separator {
-    position: relative;
-}
-
 .separator::before,
 .separator::after {
     content: '';
     position: absolute;
     width: 1px;
-    height: 12px;
+    height: 11px;
+    bottom: 0;
     background-color: $formTextColor;
 }
 
 .separator::before {
-    left: -13px;
+    left: -4px;
 }
 
 .separator::after {
-    right: -17px;
+    right: -6px;
 }
 
 
 .prevCard-wrapper:nth-child(odd){
+    
     @media (min-width: 700px) and (max-width: 992px){
         margin-right: 20px;
+    }
+
+    @media (min-width: 650px) and (max-width: 699px){
+        margin-right: 10px;
+    }
+
+    @media (min-width: 645px) and (max-width: 649px){
+        margin-right: 5px;
     }
 }

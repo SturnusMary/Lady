@@ -4,7 +4,7 @@
 
 .mainPage-content {
     justify-content: flex-start;
-    margin-top: 51px;
+    margin: 51px 0px 51px 0px;
 
     .banner-block{
         a {
@@ -19,18 +19,18 @@
             }
 
             h2{
-                padding: 0 10px 0 10px;
                 background-color: $logoColor;
-                position: absolute;
-                bottom: 0;
                 width: 100%;
             }
-            
-            div{
-                border-radius: 0px 0 0 15px;
-                padding: 0 10px 0 10px;
+
+            h2, div {
                 position: absolute;
                 bottom: 0;
+                padding: 0px 10px 0px 10px;
+            }
+
+            div{
+                border-radius: 0px 0px 0px 15px;
                 right: 0;
                 background-color: $contentColor;
             }

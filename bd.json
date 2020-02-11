@@ -5,84 +5,108 @@
             "title": "Product 1",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "2",
             "title": "Product 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "3",
             "title": "Product 3",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "4",
             "title": "Product 4",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "5",
             "title": "Product 5",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "6",
             "title": "Product 6",
             "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "7",
             "title": "Product 7",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "8",
             "title": "Product 8",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.Lorem ipsum dolor sit amet.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "9",
             "title": "Product 9",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "10",
             "title": "Product 10",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "11",
             "title": "Product 11",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "12",
             "title": "Product 12",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "shoes"
+            "category": "shoes",
+            "brand": "Brand",
+            "price": "Price"
         }
     ],
 
@@ -92,84 +116,108 @@
             "title": "Product 1",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "2",
             "title": "Product 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "3",
             "title": "Product 3",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "4",
             "title": "Product 4",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "5",
             "title": "Product 5",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "6",
             "title": "Product 6",
             "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "7",
             "title": "Product 7",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "8",
             "title": "Product 8",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.Lorem ipsum dolor sit amet.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "9",
             "title": "Product 9",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "10",
             "title": "Product 10",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "11",
             "title": "Product 11",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "12",
             "title": "Product 12",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "bags"
+            "category": "bags",
+            "brand": "Brand",
+            "price": "Price"
         }
     ],
 
@@ -179,84 +227,108 @@
             "title": "Product 1",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "2",
             "title": "Product 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "3",
             "title": "Product 3",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "4",
             "title": "Product 4",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "5",
             "title": "Product 5",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "6",
             "title": "Product 6",
             "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "7",
             "title": "Product 7",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "8",
             "title": "Product 8",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.Lorem ipsum dolor sit amet.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "9",
             "title": "Product 9",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "10",
             "title": "Product 10",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "11",
             "title": "Product 11",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "12",
             "title": "Product 12",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "jewelry"
+            "category": "jewelry",
+            "brand": "Brand",
+            "price": "Price"
         }
     ],
 
@@ -266,84 +338,108 @@
             "title": "Product 1",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "2",
             "title": "Product 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "3",
             "title": "Product 3",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "4",
             "title": "Product 4",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "5",
             "title": "Product 5",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "6",
             "title": "Product 6",
             "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "7",
             "title": "Product 7",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "8",
             "title": "Product 8",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.Lorem ipsum dolor sit amet.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "9",
             "title": "Product 9",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "10",
             "title": "Product 10",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "11",
             "title": "Product 11",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "12",
             "title": "Product 12",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "clothing"
+            "category": "clothing",
+            "brand": "Brand",
+            "price": "Price"
         }
     ],
 
@@ -353,84 +449,108 @@
             "title": "Product 1",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "2",
             "title": "Product 2",
             "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "3",
             "title": "Product 3",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "4",
             "title": "Product 4",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "5",
             "title": "Product 5",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "6",
             "title": "Product 6",
             "description": "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero velit sed corrupti consequuntur quos amet. Est ab iusto suscipit sed animi explicabo, adipisci dolorum in, necessitatibus possimus maxime illum vero. Cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "7",
             "title": "Product 7",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "8",
             "title": "Product 8",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.Lorem ipsum dolor sit amet.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "9",
             "title": "Product 9",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit. Lorem ipsum dolor sit amet sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "10",
             "title": "Product 10",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "11",
             "title": "Product 11",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore, cons adipiscing elit.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         },
         {
             "id": "12",
             "title": "Product 12",
             "description": "Lorem ipsum dolor sit amet, cons adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.",
             "url": "Shoes1",
-            "category": "sports"
+            "category": "sports",
+            "brand": "Brand",
+            "price": "Price"
         }
     ]
 }

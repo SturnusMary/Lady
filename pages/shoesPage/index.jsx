@@ -10,12 +10,11 @@ import images from '../../img/shoes/*.jpg';
 
 export function ShoesPage (props) {
     const bdOfShoes = bd.shoes;
-    const {scroll} = props;
 
     return (
         <React.Fragment>
             <ScrollToTop />
-            <Header scroll={scroll} title='Shoes'/>
+            <Header title='Shoes'/>
             <div className='Page-content'>
                 {bdOfShoes.map(item => (
                     <PreviewCard key={item.id} category={item.category} id={item.id} src={images[`${item.id}`]} title={item.title} description={item.description}/>

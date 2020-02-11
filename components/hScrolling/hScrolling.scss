@@ -1,0 +1,54 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.scrollBlock-wrapper {
+    width: 100%;
+    // margin-bottom: 40px;
+
+    .scrollBlock-heading {
+        margin: 37px 20px 0px;
+        font-size: 12px;
+
+        div {
+            @include flex-ai-center;
+            justify-content: space-between;
+            font-size: 27px;
+            line-height: 27px;
+            margin-bottom: 5px;
+            color: $logoColor;
+            
+            a {
+                font-size: 12px;
+                color: $linkPinkColor;
+            }
+        }
+    }
+
+    .hScrolling-wrapper{
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+        grid-template-columns: 10px repeat(6, 148px) 10px;
+        grid-template-rows: minmax(184px, 1fr);
+        scroll-behavior: smooth;
+        scroll-snap-type: x proximity;
+        overflow-y: hidden;
+        overflow-x: auto;
+        padding: 20px 0px;
+       
+        & > .hScrolling-card {
+            position: relative;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+        }
+    }
+}
+
+
+
+
+

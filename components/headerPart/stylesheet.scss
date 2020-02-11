@@ -4,6 +4,7 @@
 
 header {
     @include flex-jc-center;
+    align-items: center;
     height: 51px;
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.05);
     width: 100%;
@@ -11,7 +12,6 @@ header {
     top: 0;
     z-index: 2;
     background-color: white;
-    align-items: center;
     
     .wrapper-header{
         @include flex-ai-center;
@@ -24,10 +24,9 @@ header {
             font-size: 23px;
             padding: 5px;
         }
-
+        
         span {
             font-size: 18px;
-            line-height: 27px;
             color: $linkPinkColor;
         }
 
@@ -36,14 +35,15 @@ header {
             position: relative;
             width: 30px;
             height: 30px;
+            margin-left: 25px;
 
             span,
             span::before,
             span::after {
                 position: absolute;
                 top: 50%;
-                margin-top: -0.5px;
                 left: 50%;
+                margin-top: -0.5px;
                 margin-left: -10px;
                 width: 20px;
                 height: 1px;
@@ -66,12 +66,15 @@ header {
         }
 
         .menu-btn_active {
+
             span::before {
                 transform: rotate(45deg);
             }
+
             span::after {
                 transform: rotate(-45deg);
             }
+            
             span {
                 height: 0;
             }

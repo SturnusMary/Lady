@@ -12,12 +12,10 @@
         box-shadow: 0px 5px 14px 0px rgba(0, 0, 0, 0.05);
         color: white;
         font-size: 17px;
-        line-height: 26px;
         background-color: $buttonSuccessColor;
     }
 
     button:disabled {
         background-color: $buttonDisabledColor;
     }
-    
 }

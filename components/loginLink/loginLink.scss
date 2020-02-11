@@ -4,11 +4,9 @@
 
 .loginSignup-template {
     @include flex-d-column;
-    margin-top: 35px;
-    margin-bottom: 37px;
     align-items: center;
+    margin: 35px 0px 37px 0px;
     font-size: 12px;
-    line-height: 18px;
    
     a{
         color: $linkPinkColor;

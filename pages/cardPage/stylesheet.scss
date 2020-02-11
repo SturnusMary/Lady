@@ -1,3 +1,196 @@
 @import '../../auxiliaryStyle/variable.scss';
 @import '../../auxiliaryStyle/fonts.scss';
 @import '../../auxiliaryStyle/mixins.scss';
+
+.cardPage-content {
+    @include flex-d-column;
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 0px;
+
+    &-background {
+        position: absolute;
+        top: 0px;
+        height: 70vh;
+        width: 100%;
+        background-size: cover;
+        z-index: -1;
+
+        @media (orientation:landscape){
+            height: 100vh;
+        }
+    }
+
+    .prevCard-wrapper {
+        min-height: 375px;
+        margin: 60vw 0px 30px 0px;
+
+        @media (min-width: 320px) and (max-width: 380px){
+            padding: 15px 15px;
+            width: 90vw;
+        }
+
+        @media (min-width: 440px) and (max-width: 600px){
+            width: 75vw;
+        }
+
+        @media (min-width: 601px) and (max-width: 992px){
+            padding: 25px 30px;
+            width: 70vw;
+        }
+
+        @media (orientation:landscape){
+            margin: 61px 0px 30px 0px;
+        }
+
+        .prevCard{ 
+            flex-direction: column;
+
+            .prevCard-text-header {
+                position: relative;
+                margin-bottom: 8px;
+
+                h3{
+                    color: $linkPinkColor;
+                    font-size: 18px;
+                }
+               
+                .bookmark {
+                    position: absolute;
+                    right: 0;
+                    top: 6px;
+
+                    svg{
+                        fill: $linkPinkColor;
+                    }
+                }
+            }
+
+            &-img {
+                display: flex;
+                width: 100%;
+                height: 145px;
+                margin-bottom: 10px;
+                overflow: hidden; 
+
+                @media (min-width: 440px) and (max-width: 600px){
+                    height: 175px;
+                }
+
+                @media (min-width: 601px) and (max-width: 700px){
+                    height: 200px;
+                }
+
+                @media (min-width: 701px) and (max-width: 800px){
+                    height: 250px;
+                }
+
+                @media (min-width: 801px) and (max-width: 992px){
+                    height: 300px;
+                }
+
+                &-wrapper {
+                    overflow: hidden;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .prevCard-text {
+                margin-left: 0;
+
+                .full-text {
+                    min-height: 65px;
+
+                    @media (min-width: 440px) and (max-width: 600px){
+                        font-size: 10px;
+                        line-height: 14px;
+                    }
+
+                    @media (min-width: 601px) and (max-width: 992px){
+                        font-size: 11px;
+                        line-height: 16px;
+                    }
+                }
+
+                .tabBar {
+                    position: relative;
+                    height: 20px;
+
+                    span {
+                        font-size: 9px;
+                        line-height: 20px;
+
+                        @media (min-width: 500px) and (max-width: 600px){
+                            font-size: 12px;
+                            line-height: 20px;
+                        }
+
+                        @media (min-width: 601px) and (max-width: 992px){
+                            font-size: 13px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    svg {
+                        height: 20px;
+                        width: auto;
+
+                        @media (min-width: 500px) and (max-width: 600px){
+                            height: 23px;
+                        }
+
+                        @media (min-width: 601px) and (max-width: 992px){
+                            height: 24px;
+                        }
+                    }
+
+                    .separator::before,
+                    .separator::after {
+                        height: 20px;
+                    }
+
+                    .separator::before {
+                        left: -4px;
+                    }
+                
+                    .separator::after {
+                        right: -10px;
+                    }
+                }
+
+                .tabBar::before {
+                    content: '';
+                    position: absolute;
+                    top:  -15px;
+                    right: 0px;
+                    left: 0px;
+                    width: 100%;
+                    height: 1px;
+                    background-color:  $formTextColor;
+                } 
+            }
+        }
+    }
+}
+
+#cardPage {
+    #prevCard-wrapper {
+        height: auto;
+    }
+
+    .prevCard-wrapper , .prevCard-text-header {
+        a {
+            pointer-events: none;
+        }
+    }
+
+    .tabBar {
+        margin-top: 30px;
+    }
+}
+

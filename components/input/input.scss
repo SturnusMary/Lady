@@ -5,7 +5,6 @@
 input[type='password'] {
     color: $formTextColor;
     font-size: 0.3em !important;
-    line-height: 4em !important;
 	font-family: "fontello";
 	font-style: normal;
 	font-weight: normal;
@@ -23,7 +22,6 @@ input[type='password'] {
 
     label {
         font-size: 9px;
-        line-height: 13px;
         margin-bottom: 5px;
     }
 
@@ -36,8 +34,8 @@ input[type='password'] {
         padding-left: 13px;
         position: relative;
         font-size: 12px;
-        line-height: 18px;
     }
+
     input:disabled{
         background-color: rgba(0, 0, 0, 0.02);
     }

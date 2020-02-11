@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './stylesheet.scss';
 import 'regenerator-runtime/runtime';
+import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
 import {Header} from '../../components/headerPart/index';
 import {Input} from '../../components/input/input';
 import {Botton} from '../../components/botton/botton';
 import {Social} from '../../components/social/social';
 import {LoginLink} from '../../components/loginLink/loginLink';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
+
 
 export class SignupPage extends React.Component {
     constructor(props){
@@ -57,7 +58,6 @@ export class SignupPage extends React.Component {
 
     render(){
         const {valueHide, inputEmail2, inputPasswordRep, inputName, inputUsername, inputPassword1} = this.state;
-        const {scroll} = this.props;
         
         this.validated = false;
         if(inputPassword1.valid ){
@@ -71,7 +71,7 @@ export class SignupPage extends React.Component {
         return (
             <React.Fragment>
                 <ScrollToTop />
-                <Header scroll={scroll}/>
+                <Header />
                 <main className='signupPage-content'>
                     <form>
                         <Input 
@@ -128,5 +128,4 @@ export class SignupPage extends React.Component {
 }
 
 SignupPage.propTypes = {
-    scroll: PropTypes.bool,
 };

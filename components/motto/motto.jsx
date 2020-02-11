@@ -40,6 +40,9 @@ export function Motto(props) {
     )
 }
 
-// Motto.propTypes = {
-//     isLoading: PropTypes.boll,
-// };
+Motto.propTypes = {
+    isLoading: PropTypes.oneOfType([
+        PropTypes.func,
+        PropTypes.bool,
+    ]),
+};

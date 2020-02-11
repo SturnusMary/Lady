@@ -1,30 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
 import {Header} from '../../components/headerPart/index';
-import Banner from '../../img/banner.jpg';
+
 import {TabBar} from '../../components/tabBar/index';
 import {Loader} from '../../components/loader/loader';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
+import {HScrolling} from '../../components/hScrolling/hScrolling';
+import {SimpleSlider } from '../../components/сarousel/сarousel';
 import './stylesheet.scss';
 
 export class MainPage extends React.Component {
   
     render(){
-        const {isLoading, scroll} = this.props;
+        const {isLoading, onGetList, onGetSaleList} = this.props;
 
         return (
             <React.Fragment>
                 <ScrollToTop />
                 <Loader isLoading={isLoading} />
-                <Header scroll={scroll}/>
+                <Header />
                 <main className='mainPage-content' style={{display: isLoading ? 'none': 'flex'}}>
-                    <div className='banner-block'>
-                        <a href='#'>
-                            <img src={Banner}></img>
-                            <h2>Fashion sale</h2>
-                            <div>Check</div>
-                        </a>
-                    </div>
+                    <SimpleSlider  />
+                    <HScrolling onGetSaleList={onGetSaleList} newPrice='New Price' color='#FA3572' label='Sale'>Super summer sale</HScrolling>
+                    <HScrolling onGetList={onGetList} color='#A1A7DB' label='New'>You’ve never seen it before!</HScrolling>
                    <TabBar />
                 </main>
             </React.Fragment>
@@ -34,5 +32,5 @@ export class MainPage extends React.Component {
 
 MainPage.propTypes = {
     isLoading: PropTypes.bool,
-    scroll: PropTypes.bool,
+    onGetList: PropTypes.func,
 };
