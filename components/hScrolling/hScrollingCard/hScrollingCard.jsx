@@ -1,13 +1,11 @@
-import React, { Children } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import './hScrollingCard.scss';
 
 export class HScrollingCard extends React.Component {
-
     render() {
         const {src, label, colorL, brand, title, price, to, newPrice} = this.props;
-
         return (
             <div className='hScrolling-card'>
                 <div style={{backgroundColor: `${colorL}`}} className='hScrolling-card-label'>{label === 'New' ? label : '-25%'}</div>
@@ -28,7 +26,6 @@ export class HScrollingCard extends React.Component {
         )
     }
 }
-
 
 HScrollingCard.propTypes = {
     src: PropTypes.string,

@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import './stylesheet.scss';
 
 export class TabBar extends React.Component {
-  
     render(){
         return (
             <React.Fragment>
@@ -13,7 +11,7 @@ export class TabBar extends React.Component {
                         <nav id='navBar'>
                             <ul className='navBar-content'>
                                 <li  className='navBar-content__icon'>
-                                    <NavLink to='/'>
+                                    <NavLink exact to='/'>
                                         <svg width="29" height="24" viewBox="0 0 29 24" fill="none" >
                                             <path fillRule="evenodd" d="M11.2941 24V15.5294H16.9412V24H24V12.7059H28.2353L14.1176 0L0 12.7059H4.23529V24H11.2941Z" />
                                         </svg>
@@ -48,8 +46,3 @@ export class TabBar extends React.Component {
         )
     }
 }
-
-
-// TabBar.propTypes = {
-//    
-// };

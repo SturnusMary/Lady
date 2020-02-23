@@ -1,56 +1,25 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import './stylesheet.scss';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
-import {Header} from '../../components/headerPart/index';
-import {Input} from '../../components/input/input';
-import {Checkbox} from '../../components/checkbox/checkbox';
+import Header from '../../components/headerPart/index';
+import Input from '../../components/input/input';
+import Checkbox from '../../components/checkbox/checkbox';
 import {Botton} from '../../components/botton/botton';
 import {Social} from '../../components/social/social';
 import {LoginLink} from '../../components/loginLink/loginLink';
-import {Motto} from '../../components/motto/motto';
+import Motto from '../../components/motto/motto';
+import ScrollToTop from '../../components/scrollToTop/scrollToTop';
 
-export class LoginPage extends React.Component {
-    constructor(props){
-        super(props);
-        this.state ={
-            inputEmail: {
-                value: '',
-                valid: false,
-            },
-            inputPassword: {
-                value: '',
-                valid: false,
-            },
-            valueHide: true,
-        }
-        this.allValidated = false;
-        this.onInputChange = this.onInputChange.bind(this);
-        this.onClickValueHide = this.onClickValueHide.bind(this);
-    }
-
-    onInputChange(inputName, value, valid){
-        this.setState({
-            [inputName]: {
-              value,
-              valid,
-            },
-        });
-    }
-
-    onClickValueHide(valueHide){
-        this.setState({
-            valueHide,
-        })
-    }
-
+class LoginPage extends React.Component {
     render(){
-        const {inputEmail, valueHide, inputPassword} = this.state;
-        
-        if(inputEmail.valid && inputPassword.valid){
+        this.allValidated = false;
+        const {inputEmailLogin, inputPasswordLogin, valueHide} = this.props;
+
+        if(inputEmailLogin.valid && inputPasswordLogin.valid){
             this.allValidated = true;
         }
-        
+
         return (
             <React.Fragment>
                 <ScrollToTop />
@@ -59,22 +28,19 @@ export class LoginPage extends React.Component {
                     <Motto />
                     <form>
                         <Input 
-                            name='inputEmail'
+                            name='inputEmailLogin'
                             type='email'
-                            onInputChange={this.onInputChange}
-                            valid={inputEmail.valid}
-                            value={inputEmail.value}
+                            valid={inputEmailLogin.valid}
+                            value={inputEmailLogin.value}
                             onFocusHide={this.onFocusHide}
                             patern='^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$'
                         >E-mail</Input>
                         <Input 
-                            name='inputPassword'
+                            name='inputPasswordLogin'
                             type={valueHide ? 'password': 'text'}
-                            onInputChange={this.onInputChange}
-                            valid={inputPassword.valid}
-                            value={inputPassword.value}
+                            valid={inputPasswordLogin.valid}
+                            value={inputPasswordLogin.value}
                             patern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$'
-                            hide={this.onClickValueHide}
                         >Password</Input>
                         <div className='checkboxBlock'>
                             <Checkbox name='checkboxLogin'>Remember me</Checkbox>
@@ -90,6 +56,18 @@ export class LoginPage extends React.Component {
     }
 }
 
-LoginPage.propTypes = {
+const mapStateToPropsLoginPage = (state) => {
+    return {
+        valueHide: state.loginPageR.valueHide,
+        inputEmailLogin: state.loginPageR.inputEmailLogin,
+        inputPasswordLogin: state.loginPageR.inputPasswordLogin,
+    }
+}
 
+export default connect(mapStateToPropsLoginPage)(LoginPage);
+
+LoginPage.propTypes = {
+    valueHide: PropTypes.bool,
+    inputEmailLogin: PropTypes.object,
+    inputPasswordLogin: PropTypes.object,
 };

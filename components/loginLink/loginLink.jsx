@@ -4,7 +4,6 @@ import {NavLink} from 'react-router-dom';
 import './loginLink.scss';
 
 export class LoginLink extends React.Component {
-  
     render(){
         const{children, link, to} = this.props;
         return(

@@ -1,40 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import {MainPage} from './pages/mainPage/index';
-import {LoginPage} from './pages/loginPage/index';
-import {SignupPage} from './pages/signupPage/index';
+import {Provider, connect} from 'react-redux';
+import * as Actions from './actions/actions';
+import {store} from './store';
+import MainPage from './pages/mainPage/index';
+import LoginPage from './pages/loginPage/index';
+import SignupPage from './pages/signupPage/index';
 import {ShoesPage} from './pages/shoesPage/index';
 import {BagsPage} from './pages/bagsPage/index';
 import {JewelryPage} from './pages/jewelryPage/index';
 import {ClothingPage} from './pages/clothingPage/index';
 import {SportsPage} from './pages/sportsPage/index';
-import {CardPage} from './pages/cardPage/index';
-import {NewPage} from './pages/newPage/index';
-import {SalePage} from './pages/salePage/index';
+import CardPage from './pages/cardPage/index';
+import NewPage from './pages/newPage/index';
+import SalePage from './pages/salePage/index';
+import {NotFound} from './pages/404/index'
 import './stylesheet.scss';
-
+// import ScrollToTop from './components/scrollToTop/scrollToTop'
 class App extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            width: window.innerWidth,
-            isLoading: true,
-            newList: [],
-            saleList: [],
-        }
-        this.forResizeGetData = this.forResizeGetData.bind(this);
-        this.onLoad = this.onLoad.bind(this);
-        this.onGetNewList = this.onGetNewList.bind(this);
-        this.onGetSaleList = this.onGetSaleList.bind(this);
-    }
-
-    onLoad(){this.setState({isLoading: false})}
-    onGetNewList(newList){this.setState({newList,})}
-    onGetSaleList(saleList){this.setState({saleList,})}
+    onLoad = () => {this.props.isPreloader(false)}
 
     componentDidMount(){
         this.timerID = setTimeout(this.onLoad, 4000);
+        clearTimeout(this.timerId);
         window.addEventListener('resize', this.forResizeGetData);
     }
 
@@ -42,59 +31,75 @@ class App extends React.Component {
         window.removeEventListener('resize', this.forResizeGetData);
     }
 
-    forResizeGetData(){
+    forResizeGetData = () => {
         this.status = false;
         if(window.innerWidth < 993){
             this.status = true;
         }
 
         if(this.status != this.resizeState) {
-            this.setState({
-                width: window.innerWidth,
-            });
+            this.props.setWidth(window.innerWidth);
         }
         this.resizeState = this.status;
     }
 
-    render(){
-        const {isLoading, width, newList, saleList} = this.state;
-      
+    render(){ 
+        const {width, isLoading} = this.props;
+
         if(width < 993){
             return (
                 <BrowserRouter>
                     <div className='app'>
                         <Switch>
-                            <Route exact path='/' render={(props)=><MainPage onGetList={this.onGetNewList}  onGetSaleList={this.onGetSaleList} isLoading={isLoading}{...props}/>} />
-                            <Route exact path='/login' render={(props)=><LoginPage  {...props}/>} />
-                            <Route exact path='/signup' render={(props)=><SignupPage  {...props}/>}/>
-                            <Route exact path='/shoes' render={(props)=><ShoesPage {...props}/>}/>
-                            <Route exact path='/bags' render={(props)=><BagsPage {...props}/>}/>
-                            <Route exact path='/jewelry' render={(props)=><JewelryPage {...props}/>}/>
-                            <Route exact path='/clothing' render={(props)=><ClothingPage  {...props}/>}/>
-                            <Route exact path='/sports' render={(props)=><SportsPage {...props}/>}/>
-                            <Route exact path='/new' render={(props)=><NewPage list={newList} {...props}/>}/>
-                            <Route exact path='/sale' render={(props)=><SalePage list={saleList} {...props}/>}/>
-
-                            <Route path='/shoes/:id' component={CardPage}/>
-                            <Route path='/bags/:id' component={CardPage}/>
-                            <Route path='/jewelry/:id' component={CardPage}/>
-                            <Route path='/clothing/:id' component={CardPage}/>
-                            <Route path='/sports/:id' component={CardPage}/>
+                            <Route exact path='/' render={(props)=><MainPage isLoading={isLoading} {...props}/>} />
+                            <Route exact path='/login' component={LoginPage} />
+                            <Route exact path='/signup' component={SignupPage} />
+                            <Route exact path='/shoes' component={ShoesPage} />
+                            <Route exact path='/bags' component={BagsPage} />
+                            <Route exact path='/jewelry' component={JewelryPage} />
+                            <Route exact path='/clothing' component={ClothingPage} />
+                            <Route exact path='/sports' component={SportsPage} />
+                            <Route exact path='/new'  component={NewPage} />
+                            <Route exact path='/sale' component={SalePage} />
+                            <Route exact path='/shoes/:id' component={CardPage}/>
+                            <Route exact path='/bags/:id' component={CardPage}/>
+                            <Route exact path='/jewelry/:id' component={CardPage}/>
+                            <Route exact path='/clothing/:id' component={CardPage}/>
+                            <Route exact path='/sports/:id' component={CardPage}/>
+                            <Route path="*" component={NotFound} />
                         </Switch>
                     </div>
                 </BrowserRouter>
             )
-        } else{
+        }else {
             return (
-                <div>Sorry, this layout is mobile only!</div>
+                <div className='unsuitable'>
+                    <p>Sorry, this layout is mobile only!</p>
+                </div>
             )
         }
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        width: state.rootR.width,
+        isLoading: state.rootR.isLoading,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setWidth: (value) => dispatch(Actions.setWidth(value)),
+        isPreloader: (value) => dispatch(Actions.isPreloader(value))
+    }
+}
+
+const ConnectedApp = connect(mapStateToProps, mapDispatchToProps)(App);
+
 ReactDOM.render(
-    <div className='container'>
-        <App></App>
-    </div>,
+    <Provider store={store}>
+        <ConnectedApp />
+    </Provider>,
    document.getElementById('root')
 );

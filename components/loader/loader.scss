@@ -28,11 +28,9 @@
 }
 
 @keyframes disappear {
-
     70% {
         transform: translateX(0%);
     }
-
     100% {
         transform: translateX(-150%);
     }
