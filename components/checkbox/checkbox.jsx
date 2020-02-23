@@ -6,10 +6,10 @@ import * as Actions from '../../actions/actions';
 
 class Checkbox extends React.Component {
     render(){
-        const{name, children} = this.props;
+        const{name, children, isChecked} = this.props;
         return(
             <div className='checkbox-template'>
-                <input type='checkbox' name={name} id={name} onClick={this.props.isChecked} name='Login'></input>
+                <input type='checkbox' name={name} id={name} onClick={isChecked} name='Login'></input>
                 <label htmlFor={name}>{children}</label>
             </div>
         )

@@ -17,7 +17,7 @@ import NewPage from './pages/newPage/index';
 import SalePage from './pages/salePage/index';
 import {NotFound} from './pages/404/index'
 import './stylesheet.scss';
-// import ScrollToTop from './components/scrollToTop/scrollToTop'
+
 class App extends React.Component {
     onLoad = () => {this.props.isPreloader(false)}
 
@@ -45,7 +45,6 @@ class App extends React.Component {
 
     render(){ 
         const {width, isLoading} = this.props;
-
         if(width < 993){
             return (
                 <BrowserRouter>

@@ -12,6 +12,11 @@ import Motto from '../../components/motto/motto';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
 
 class LoginPage extends React.Component {
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.props);
+    }
+    
     render(){
         this.allValidated = false;
         const {inputEmailLogin, inputPasswordLogin, valueHide} = this.props;
@@ -19,14 +24,13 @@ class LoginPage extends React.Component {
         if(inputEmailLogin.valid && inputPasswordLogin.valid){
             this.allValidated = true;
         }
-
         return (
             <React.Fragment>
                 <ScrollToTop />
                 <Header />
                 <main className='startPage-content'>
                     <Motto />
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <Input 
                             name='inputEmailLogin'
                             type='email'
@@ -46,8 +50,8 @@ class LoginPage extends React.Component {
                             <Checkbox name='checkboxLogin'>Remember me</Checkbox>
                             <a href='#'>Forgot your password ?</a>
                         </div>
+                        <Botton allValidated={this.allValidated}>Login</Botton>
                     </form>
-                    <Botton allValidated={this.allValidated}>Login</Botton>
                     <Social></Social>
                     <LoginLink link='Signup' to='/signup'>New user?</LoginLink>
                 </main>
@@ -61,6 +65,7 @@ const mapStateToPropsLoginPage = (state) => {
         valueHide: state.loginPageR.valueHide,
         inputEmailLogin: state.loginPageR.inputEmailLogin,
         inputPasswordLogin: state.loginPageR.inputPasswordLogin,
+        viewCheckbox: state.loginPageR.viewCheckbox,
     }
 }
 

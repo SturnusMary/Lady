@@ -3,7 +3,7 @@ import './stylesheet.scss';
 import Header from '../../components/headerPart/index';
 import {useHistory} from "react-router-dom";
 
-export function NotFound(props) {
+export function NotFound() {
     const history = useHistory();
     return (
         <React.Fragment>

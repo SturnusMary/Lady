@@ -10,6 +10,11 @@ import {LoginLink} from '../../components/loginLink/loginLink';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
 
 class SignupPage extends React.Component {
+    handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(this.props);
+    }
+
     render(){
         const {inputEmailSignup, inputPasswordRep, inputName, inputUsername, inputPasswordSignup, valueHide} = this.props;
         this.allValidated = false;
@@ -27,7 +32,7 @@ class SignupPage extends React.Component {
                 <ScrollToTop />
                 <Header />
                 <main className='signupPage-content'>
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                         <Input 
                             name='inputName'
                             type='text'
@@ -64,9 +69,9 @@ class SignupPage extends React.Component {
                             value={inputPasswordRep.value}
                             patern={this.validated}
                         ></Input>
+                        <p className='prompt'>Minimum 8 characters</p>
+                        <Botton allValidated={this.allValidated}>Signup</Botton>
                     </form>
-                    <p className='prompt'>Minimum 8 characters</p>
-                    <Botton allValidated={this.allValidated}>Signup</Botton>
                     <Social></Social>
                     <LoginLink link='Login Now' to='/login'>Already have an account?</LoginLink>
                 </main>

@@ -4,10 +4,10 @@ import {Link} from 'react-router-dom';
 import './previewCard.scss';
 
 export class PreviewCard extends React.Component {
-    render() {    
-    const {src, title, description, id, category, full} = this.props;
+    render() {   
+    const {full, src, item} = this.props;
     return (
-        <div className='prevCard-wrapper' id='prevCard-wrapper'>
+        <div className='prevCard-wrapper'>
             <div className='prevCard'>
                 <div className='prevCard-text-header' style={{display: full ? 'block' : 'none'}}>
                     <button className='bookmark'>
@@ -15,12 +15,12 @@ export class PreviewCard extends React.Component {
                             <path fillRule="evenodd" d="M5.748,8.920 L0.813,12.961 L0.813,0.030 L10.682,0.030 L10.682,12.961 L5.748,8.920 ZM9.695,0.839 L1.800,0.839 L1.800,1.647 L9.695,1.647 L9.695,0.839 ZM9.695,2.455 L1.800,2.455 L1.800,11.102 L5.748,7.950 L9.695,11.102 L9.695,2.455 Z"/>
                         </svg>
                     </button>
-                    <Link to={`/${category}/product${id}`}><h3>{title}</h3></Link>
+                    <Link to={`/${item.category}/product${item.id}`}><h3>{item.title}</h3></Link>
                 </div>
 
-                <Link to={`/${category}/product${id}`} className='prevCard-img'>
+                <Link to={`/${item.category}/product${item.id}`} className='prevCard-img'>
                     <div className='prevCard-img-wrapper'>
-                        <img src={src} alt={`${title} ${category}`} />
+                        <img src={src} alt={`${item.title} ${item.category}`} />
                     </div>
                 </Link>
                
@@ -32,10 +32,10 @@ export class PreviewCard extends React.Component {
                                 <path fillRule="evenodd" d="M5.748,8.920 L0.813,12.961 L0.813,0.030 L10.682,0.030 L10.682,12.961 L5.748,8.920 ZM9.695,0.839 L1.800,0.839 L1.800,1.647 L9.695,1.647 L9.695,0.839 ZM9.695,2.455 L1.800,2.455 L1.800,11.102 L5.748,7.950 L9.695,11.102 L9.695,2.455 Z"/>
                             </svg>
                         </button>
-                        <Link to={`/${category}/product${id}`}><h3>{title}</h3></Link>
+                        <Link to={`/${item.category}/product${item.id}`}><h3>{item.title}</h3></Link>
                     </div>
 
-                    <p className={full ? 'full-text' : 'crop-text'}>{description}</p>
+                    <p className={full ? 'full-text' : 'crop-text'}>{item.description}</p>
                     
                     <div className='tabBar'>
                         <div className='tabBar-item'>
@@ -76,6 +76,6 @@ export class PreviewCard extends React.Component {
 
 PreviewCard.propTypes = {
     src: PropTypes.string,
-    title: PropTypes.string,
-    description: PropTypes.string
+    item: PropTypes.object,
+    full: PropTypes.bool
 };
