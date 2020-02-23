@@ -12,6 +12,7 @@ import {images} from '../../constants/pages';
 
 class CardPage extends React.Component {
     componentDidMount() {
+        console.log(this.props.match)
         let category = this.props.match.url.split('/')[1];
         let title = category[0].toUpperCase() + category.slice(1);
         let id = this.props.match.params.id.split('product')[1];
@@ -24,14 +25,13 @@ class CardPage extends React.Component {
 
     render(){
         const {objCard, titleCardH, imgBackCard} = this.props;
-        
         return(
             <React.Fragment>
                 <ScrollToTop />
                 <Header title={titleCardH}/>
                 <main className='cardPage-content' id='cardPage'>
                     <div style={{backgroundImage: imgBackCard}} className='cardPage-content-background'></div>
-                    <PreviewCard id={objCard.id} category={objCard.category} full={true} title={objCard.title} src={objCard.id ? images[objCard.category][(+objCard.id + 12)] : ''} description={objCard.description}/>
+                    <PreviewCard item={objCard} full={true} src={objCard.id ? images[objCard.category][(+objCard.id + 12)] : ''} />
                 </main>
                 <TabBar />
             </React.Fragment>

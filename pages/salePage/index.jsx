@@ -8,16 +8,13 @@ import {PreviewCard} from '../../components/previewCard/previewCard';
 import {images} from '../../constants/pages';
 const uuidv1 = require('uuid/v1');
 
-function SalePage (props) {
-    const {saleList} = props;
+function SalePage ({saleList}) {
     return (
         <React.Fragment>
             <ScrollToTop />
             <Header title='Sale'/>
             <div className='Page-content'>
-                {saleList.map(el => (
-                    <PreviewCard category={el.category} key={uuidv1()} id={el.id} src={images[el.category][`${el.id}`]} title={el.title} description={el.description}/>
-                ))}
+                {saleList.map(el => <PreviewCard item={el} key={uuidv1()} src={images[el.category][`${el.id}`]}/>)}
             </div>
             <TabBar />
         </React.Fragment>

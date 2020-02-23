@@ -6,16 +6,14 @@ import {PreviewCard} from '../../components/previewCard/previewCard';
 import bd from '../../bd.json';
 import images from '../../img/sports/*.jpg';
 
-export function SportsPage (props) {
+export function SportsPage () {
     const bdOfSports = bd.sports;
     return (
         <React.Fragment>
             <ScrollToTop />
             <Header title='Sports'/>
             <div className='Page-content'>
-                {bdOfSports.map(item => (
-                    <PreviewCard category={item.category} key={item.id} id={item.id} src={images[`${item.id}`]} title={item.title} description = {item.description}/>
-                ))}
+                {bdOfSports && bdOfSports.map(item => <PreviewCard item={item} key={item.id} src={images[`${item.id}`]}/>)}
             </div>
             <TabBar />
         </React.Fragment>

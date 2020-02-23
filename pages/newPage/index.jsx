@@ -8,16 +8,13 @@ import {PreviewCard} from '../../components/previewCard/previewCard';
 import {images} from '../../constants/pages';
 const uuidv1 = require('uuid/v1');
 
-function NewPage (props) {
-    const {newList} = props;
+function NewPage ({newList}) {
     return (
         <React.Fragment>
             <ScrollToTop />
             <Header title='New'/>
             <div className='Page-content'>
-                {newList.map(el => (
-                    <PreviewCard category={el.category} key={uuidv1()} id={el.id} src={images[el.category][`${el.id}`]} title={el.title} description={el.description}/>
-                ))}
+                {newList.map(el => <PreviewCard item={el} key={uuidv1()} src={images[el.category][`${el.id}`]}/>)}
             </div>
             <TabBar />
         </React.Fragment>

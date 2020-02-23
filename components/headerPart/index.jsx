@@ -27,7 +27,7 @@ class Header extends React.Component {
                 <header>
                     <div className='wrapper-header'>
                         <NavLink aria-label="home page" to='/'><div className='logo'>Lady</div></NavLink>
-                        <NavLink aria-label={`${title} page`} to={`/${title}`}><span>{title}</span></NavLink>
+                        <NavLink aria-label={`${title} page`} to={`/${title ? title.toLowerCase() : null}`}><span>{title}</span></NavLink>
                         <button aria-label="menu" className={activeBtn === 'start' ? 'menu-btn' : !activeBtn ? 'menu-btn menu-btn_active' : 'menu-btn'} onClick={this.handlerClick}>
                             <span></span>
                         </button>
