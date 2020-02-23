@@ -1,35 +1,37 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
-import {Header} from '../../components/headerPart/index';
+import Header from '../../components/headerPart/index';
 import {TabBar} from '../../components/tabBar/index';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
+import ScrollToTop from '../../components/scrollToTop/scrollToTop';
 import {PreviewCard} from '../../components/previewCard/previewCard';
-
-import bags from '../../img/bags/*.jpg';
-import sports from '../../img/sports/*.jpg';
-import clothing from '../../img/clothing/*.jpg';
-import jewelry from '../../img/jewelry/*.jpg';
-import shoes from '../../img/shoes/*.jpg';
-const images = {shoes, bags, jewelry, clothing, sports};
+import {images} from '../../constants/pages';
 const uuidv1 = require('uuid/v1');
 
-export function NewPage (props) {
-    const {list} = props;
-
+function NewPage (props) {
+    const {newList} = props;
     return (
         <React.Fragment>
             <ScrollToTop />
             <Header title='New'/>
             <div className='Page-content'>
-                {list.map(el => (
+                {newList.map(el => (
                     <PreviewCard category={el.category} key={uuidv1()} id={el.id} src={images[el.category][`${el.id}`]} title={el.title} description={el.description}/>
                 ))}
             </div>
-            {/* <TabBar /> */}
+            <TabBar />
         </React.Fragment>
     )
 }
 
+const mapStateToPropsNewPage = (state) => {
+    return {
+        newList: state.hScrollingR.newList,
+    }
+}
+
+export default connect(mapStateToPropsNewPage)(NewPage);
+
 NewPage.propTypes = {
-    list: PropTypes.array,
+    newList: PropTypes.array,
 };

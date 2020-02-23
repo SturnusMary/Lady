@@ -32,7 +32,7 @@ footer {
             }
         }
 
-        &__icon a:hover, .active {
+        &__icon a:hover, &__icon .active {
             
             svg {
                 @include svg-stroke-hover;

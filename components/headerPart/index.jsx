@@ -1,35 +1,27 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import * as Actions from '../../actions/actions';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import {HeaderNav} from './headerNav/index';
 import './stylesheet.scss';
 
-export class Header extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            activeBtn: 'start',
-        }
-        this.handlerClick = this.handlerClick.bind(this);
+class Header extends React.Component {
+    componentDidMount(){
+        this.props.isActiveBtm('start');
     }
 
-    handlerClick(){
-        if(this.state.activeBtn === 'start'){
-            this.setState({
-                activeBtn: true,
-            })
+    handlerClick = () => {
+        const {activeBtn} = this.props;
+        if(activeBtn === 'start'){
+           this.props.isActiveBtm(true)
         }
-        
-        const currentStateBtn = this.state.activeBtn;
-        this.setState({
-            activeBtn: !currentStateBtn,
-        })
+        const currentStateBtn = activeBtn;
+        this.props.isActiveBtm(!currentStateBtn);
     }
 
     render(){
-        const{activeBtn} = this.state;
-        const{title} = this.props;
-        
+        const{title, activeBtn} = this.props;
         return (
             <React.Fragment>
                 <header>
@@ -47,6 +39,23 @@ export class Header extends React.Component {
     }
 }
 
+const mapStateToPropsHeader = (state) => {
+    return {
+        activeBtn: state.headerR.activeBtn,
+    }
+}
+
+const mapDispatchToPropsHeader = (dispatch) => {
+    return {
+        isActiveBtm: (value) => dispatch(Actions.isActiveBtm(value))
+    }
+}
+
+export default connect(mapStateToPropsHeader, mapDispatchToPropsHeader)(Header);
+
 Header.propTypes = {
-    scroll: PropTypes.bool,
+    activeBtn: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.bool,
+    ]),
 };

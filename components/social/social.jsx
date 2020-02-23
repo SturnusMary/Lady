@@ -1,9 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './social.scss';
 
 export class Social extends React.Component {
-
     render(){
         return(
             <div className='social-template'>
@@ -34,6 +32,3 @@ export class Social extends React.Component {
         )
     }
 }
-
-// Social.propTypes = {
-// };

@@ -2,10 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
 import './stylesheet.scss';
-import {Motto} from '../../../components/motto/motto';
+import Motto from '../../../components/motto/motto';
 
 export class HeaderNav extends React.Component {
-    
     render(){
         const{active} = this.props;
         return(
@@ -158,8 +157,3 @@ HeaderNav.propTypes = {
         PropTypes.bool,
     ]),
 };
-
-
-
-
-

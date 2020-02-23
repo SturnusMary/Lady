@@ -3,17 +3,11 @@ import PropTypes from 'prop-types';
 import './botton.scss';
 
 export class Botton extends React.Component {
-    constructor(props){
-        super(props);
-    }
-    onClick(){
-
-    }
     render(){
         const{children, allValidated} = this.props;
         return(
             <div className='button-template'>
-                <button disabled={!allValidated}  onClick={this.onClick}>{children}</button>
+                <button disabled={!allValidated}>{children}</button>
             </div>
         )
     }

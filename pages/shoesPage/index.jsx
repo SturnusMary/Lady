@@ -1,8 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import {Header} from '../../components/headerPart/index';
+import Header from '../../components/headerPart/index';
 import {TabBar} from '../../components/tabBar/index';
-import {ScrollToTop} from '../../components/scrollToTop/scrollToTop';
+import ScrollToTop from '../../components/scrollToTop/scrollToTop';
 import {PreviewCard} from '../../components/previewCard/previewCard';
 import './stylesheet.scss';
 import bd from '../../bd.json';
@@ -10,7 +9,6 @@ import images from '../../img/shoes/*.jpg';
 
 export function ShoesPage (props) {
     const bdOfShoes = bd.shoes;
-
     return (
         <React.Fragment>
             <ScrollToTop />
@@ -20,11 +18,7 @@ export function ShoesPage (props) {
                     <PreviewCard key={item.id} category={item.category} id={item.id} src={images[`${item.id}`]} title={item.title} description={item.description}/>
                 ))}
             </div>
-            {/* <TabBar /> */}
+            <TabBar />
         </React.Fragment>
     )
 }
-
-ShoesPage.propTypes = {
-    scroll: PropTypes.bool,
-};

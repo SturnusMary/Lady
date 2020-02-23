@@ -4,10 +4,8 @@ import {Link} from 'react-router-dom';
 import './previewCard.scss';
 
 export class PreviewCard extends React.Component {
-
-  render() {
+    render() {    
     const {src, title, description, id, category, full} = this.props;
-
     return (
         <div className='prevCard-wrapper' id='prevCard-wrapper'>
             <div className='prevCard'>
@@ -73,8 +71,7 @@ export class PreviewCard extends React.Component {
                 </div>
             </div>
         </div>
-    )
-}
+    )}
 }
 
 PreviewCard.propTypes = {

@@ -4,8 +4,10 @@
 
 .mainPage-content {
     justify-content: flex-start;
-    margin: 51px 0px 51px 0px;
-
+    margin: 0px 0px 51px 0px;
+    padding-top: 51px;
+    display: flex;
+    
     .banner-block{
         a {
             color: white;
