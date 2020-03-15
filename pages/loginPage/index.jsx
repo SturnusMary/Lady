@@ -10,20 +10,25 @@ import {Social} from '../../components/social/social';
 import {LoginLink} from '../../components/loginLink/loginLink';
 import Motto from '../../components/motto/motto';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
+import * as Actions from '../../actions/actions';
+import {Redirect} from 'react-router-dom';
 
 class LoginPage extends React.Component {
     handleSubmit = (e) => {
+        const{signIn, inputEmailLogin, inputPasswordLogin} = this.props;
         e.preventDefault();
-        console.log(this.props);
+        signIn({email: inputEmailLogin.value, password: inputPasswordLogin.value});
     }
-    
+ 
     render(){
         this.allValidated = false;
-        const {inputEmailLogin, inputPasswordLogin, valueHide} = this.props;
+        const {inputEmailLogin, inputPasswordLogin, valueHide, authError, auth} = this.props;
 
         if(inputEmailLogin.valid && inputPasswordLogin.valid){
             this.allValidated = true;
         }
+        
+        if(auth.uid) return <Redirect to='/' />
         return (
             <React.Fragment>
                 <ScrollToTop />
@@ -31,6 +36,7 @@ class LoginPage extends React.Component {
                 <main className='startPage-content'>
                     <Motto />
                     <form onSubmit={this.handleSubmit}>
+                        {authError ? <p className='signInError'>The email or password you entered is incorrect. Please go to <span> Forgot Password </span> page.</p> : null}
                         <Input 
                             name='inputEmailLogin'
                             type='email'
@@ -50,6 +56,7 @@ class LoginPage extends React.Component {
                             <Checkbox name='checkboxLogin'>Remember me</Checkbox>
                             <a href='#'>Forgot your password ?</a>
                         </div>
+                        
                         <Botton allValidated={this.allValidated}>Login</Botton>
                     </form>
                     <Social></Social>
@@ -60,19 +67,27 @@ class LoginPage extends React.Component {
     }
 }
 
-const mapStateToPropsLoginPage = (state) => {
+const mapStateToProps = (state) => {
     return {
         valueHide: state.loginPageR.valueHide,
         inputEmailLogin: state.loginPageR.inputEmailLogin,
         inputPasswordLogin: state.loginPageR.inputPasswordLogin,
-        viewCheckbox: state.loginPageR.viewCheckbox,
+        authError: state.loginPageR.authError,
+        auth: state.firebaseR.auth
     }
 }
-
-export default connect(mapStateToPropsLoginPage)(LoginPage);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signIn: (creds) => dispatch(Actions.signIn(creds)),
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
 
 LoginPage.propTypes = {
     valueHide: PropTypes.bool,
     inputEmailLogin: PropTypes.object,
     inputPasswordLogin: PropTypes.object,
+    auth: PropTypes.object,
+    authError: PropTypes.string,
+    signIn: PropTypes.func
 };

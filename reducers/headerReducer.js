@@ -1,21 +1,17 @@
 import * as Actions from '../constants/actions'
 
-const initStateHeader = {
+const initState = {
     activeBtn: 'start',
 }
 
-export function headerReducer(state = initStateHeader, action) {
+export function headerReducer(state = initState, action) {
     switch(action.type){
         case Actions.IS_ACTIVEBTN: 
             return {
                 ...state,
                 activeBtn: action.bool
             }
-    }
-
-    if(state){
+        default: 
         return state;
     }
-    
-    return state;
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../../components/headerPart/index';
-import {TabBar} from '../../components/tabBar/index';
+import TabBar from '../../components/tabBar/index';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
-import {PreviewCard} from '../../components/previewCard/previewCard';
+import PreviewCard from '../../components/previewCard/previewCard';
 import './stylesheet.scss';
 import bd from '../../bd.json';
 import images from '../../img/shoes/*.jpg';

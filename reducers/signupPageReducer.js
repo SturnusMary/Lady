@@ -1,6 +1,6 @@
 import * as Actions from '../constants/actions'
 
-const initStateSignupPage = {
+const initState = {
     inputEmailSignup: {
         value: '',
         valid: false,
@@ -21,9 +21,10 @@ const initStateSignupPage = {
         value: '',
         valid: false,
     },
+    authError: null
 }
 
-export function signupPageReducer(state = initStateSignupPage, action){
+export function signupPageReducer(state = initState, action){
     switch(action.type){
         case Actions.HIDE_VALUE: 
             return {
@@ -33,15 +34,23 @@ export function signupPageReducer(state = initStateSignupPage, action){
         case Actions.GET_INPUTDATA: 
             return {
                 ...state,
+                authError: null,
                 [action.name]: {
                     value: action.value,
                     valid: action.test,
                     },
             }
-    }
-    if(state){
+        case Actions.SIGNUP_ERROR: 
+            return {
+                ...state,
+                authError: action.err.message
+            }
+        case Actions.SIGNUP_SUCCESS: 
+            return {
+                ...state,
+                authError: null
+            }
+        default: 
         return state;
     }
-    
-    return state;
 }

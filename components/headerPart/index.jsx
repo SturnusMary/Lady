@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 import * as Actions from '../../actions/actions';
 import PropTypes from 'prop-types';
 import {NavLink} from 'react-router-dom';
-import {HeaderNav} from './headerNav/index';
+import HeaderNav from './headerNav/index';
 import './stylesheet.scss';
 
 class Header extends React.Component {
@@ -39,23 +39,23 @@ class Header extends React.Component {
     }
 }
 
-const mapStateToPropsHeader = (state) => {
+const mapStateToProps = (state) => {
     return {
         activeBtn: state.headerR.activeBtn,
     }
 }
-
-const mapDispatchToPropsHeader = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         isActiveBtm: (value) => dispatch(Actions.isActiveBtm(value))
     }
 }
 
-export default connect(mapStateToPropsHeader, mapDispatchToPropsHeader)(Header);
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
 
 Header.propTypes = {
     activeBtn: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.bool,
     ]),
+    isActiveBtm: PropTypes.func
 };

@@ -38,15 +38,18 @@ class Input extends React.Component {
     }
     
     render(){
-        const{children, type, name, valid, value, patern} = this.props;
+        const {children, type, name, valid, value, patern, authError} = this.props;
         let colorBorder = '#D6D6D633';
         let colorFill = '#C4C4C4';
-
+        
         if(value.length && patern){
-            colorBorder = valid ? '#79F89E' : '#F7C1D8';
+            colorBorder= valid ? '#79F89E' : '#F7C1D8';
             colorFill = valid ? '#79F89E' : '#F7C1D8';
         }
-       
+        if(authError){
+            colorBorder = '#FA3572';
+            colorFill = '#FA3572';
+        }
         return(
             <div className='input-template'>
                 <label htmlFor={name}>{children}</label>
@@ -82,23 +85,18 @@ class Input extends React.Component {
         )
     }
 }
-
-const mapStateToPropsInput = (state) => {
+const mapStateToProps = (state) => {
     return {
-        valueHide: state.loginPageR.valueHide,
-        inputEmailLogin: state.loginPageR.inputEmailLogin,
-        inputPasswordLogin: state.loginPageR.inputPasswordLogin,
+        authError: state.loginPageR.authError
     }
 }
-
-const mapDispatchToPropsInput= (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         hideValue: (value) => dispatch(Actions.hideValue(value)),
         getInputData: (...value) => dispatch(Actions.getInputData(...value)),
     }
 }
-
-export default connect(mapStateToPropsInput, mapDispatchToPropsInput)(Input);
+export default connect(mapStateToProps, mapDispatchToProps)(Input);
 
 Input.propTypes = {
     name: PropTypes.string,
@@ -112,4 +110,5 @@ Input.propTypes = {
         PropTypes.bool,
     ]),
     hideValue: PropTypes.func,
+    getInputData: PropTypes.func,
 };

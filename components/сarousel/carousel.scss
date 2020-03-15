@@ -9,7 +9,6 @@
     .carousel-item {
         width: 100%;
         height: auto;
-
         @include flex-jc-center;
         align-items: center;
         overflow: hidden;

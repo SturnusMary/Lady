@@ -16,21 +16,13 @@ class Checkbox extends React.Component {
     }
 }
 
-const mapStateToPropsCheckbox = (state) => {
-    return {
-        viewCheckbox: state.loginPageR.viewCheckbox,
-    }
-}
-
-const mapDispatchToPropsCheckbox= (dispatch) => {
+const mapDispatchToProps= (dispatch) => {
     return {
         isChecked: (value) => dispatch(Actions.isChecked(value)),
     }
 }
-
-export default connect(mapStateToPropsCheckbox, mapDispatchToPropsCheckbox)(Checkbox);
+export default connect(null, mapDispatchToProps)(Checkbox);
 
 Checkbox.propTypes = {
-    viewCheckbox: PropTypes.bool,
     isChecked: PropTypes.func,
 };

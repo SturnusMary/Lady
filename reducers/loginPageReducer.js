@@ -1,6 +1,6 @@
 import * as Actions from '../constants/actions'
 
-const initStateLoginPage = {
+const initState = {
     inputEmailLogin: {
         value: '',
         valid: false,
@@ -11,18 +11,21 @@ const initStateLoginPage = {
     },
     valueHide: true,
     viewCheckbox: false,
+    loginData: {},
+    authError: null
 }
 
-export function loginPageReducer(state = initStateLoginPage, action){
+export function loginPageReducer(state = initState, action){
     switch(action.type){
         case Actions.HIDE_VALUE: 
             return {
                 ...state,
                 valueHide: action.bool
             }
-        case Actions.GET_INPUTDATA: 
+        case Actions.GET_INPUTDATA:
             return {
                 ...state,
+                authError: null,
                 [action.name]: {
                     value: action.value,
                     valid: action.test,
@@ -33,11 +36,19 @@ export function loginPageReducer(state = initStateLoginPage, action){
                 ...state,
                 viewCheckbox: !state.viewCheckbox
             }
-    }
-
-    if(state){
+        case Actions.LOGIN_ERROR:
+            return {
+                ...state,
+                authError: 'Login failed'
+            }
+        case Actions.LOGIN_SUCCESS:
+            return {
+                ...state,
+                authError: null
+            }
+        case Actions.SIGNOUT_SUCCESS: 
+            return state;
+        default: 
         return state;
     }
-    
-    return state;
 }

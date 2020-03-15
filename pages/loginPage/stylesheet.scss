@@ -10,9 +10,13 @@ main {
     width: 100%;
     height: 100%;
 
+    form {
+        position: relative;
+    }
+
     .motto {
         z-index: -1;
-        margin-bottom: 34px;
+        margin-bottom: 60px;
     }
    
     .checkboxBlock {
@@ -33,3 +37,19 @@ main {
         margin-bottom: 65px;
     }
 }
+
+.signInError {
+    z-index: 0;
+    position: absolute;
+    color: #FA3572;
+    font-size: 10px;
+    line-height: 13px;
+    margin-bottom: 10px;
+    width: 302px;
+    top: -40px;
+    font-weight: 400;
+    span {
+        color: $contentColor;
+    }
+}
+
