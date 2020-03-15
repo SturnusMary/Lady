@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://sturnusmary.github.io/lady/",
   "scripts": {
     "start": "parcel ./index.html",
     "build": "rimraf dist && parcel build ./index.html -d dist --public-url ./",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d dist"
   },
-  "author": "",
+  "author": "SturnusMary",
   "license": "ISC",
   "dependencies": {
     "firebase": "^7.9.1",
@@ -30,6 +32,7 @@
     "@babel/preset-react": "^7.7.4",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
+    "gh-pages": "^2.2.0",
     "parcel": "^1.12.4",
     "rimraf": "^3.0.0",
     "sass": "^1.23.7",
