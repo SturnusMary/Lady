@@ -1,12 +1,13 @@
 import * as Actions from '../constants/actions';
 
-const initStateCardPage = {
+const initState = {
     objCard: {},
     titleCardH: null,
     imgBackCard: null,
+    saved: [],
 }
 
-export function cardPageReducer(state = initStateCardPage, action){
+export function cardPageReducer(state = initState, action){
     switch(action.type){
         case Actions.SET_OBJDATA:
             return {
@@ -15,11 +16,12 @@ export function cardPageReducer(state = initStateCardPage, action){
                 titleCardH: action.title,
                 imgBackCard: action.img,
             }
-    }
-
-    if(state){
+        case Actions.SAVE_GOODS:
+            return {
+                ...state,
+                saved: [...action.goods]
+            }
+        default: 
         return state;
     }
-
-    return state;
 }

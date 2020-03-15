@@ -1,11 +1,11 @@
 import * as Actions from '../constants/actions';
 
-const initStateRoot = {
+const initState = {
     width: window.innerWidth,
     isLoading: true,
 }
 
-export function rootReducer(state = initStateRoot, action) {
+export function rootReducer(state = initState, action) {
     switch(action.type){
         case Actions.SET_WIDTH:
             return {
@@ -17,11 +17,7 @@ export function rootReducer(state = initStateRoot, action) {
                 ...state,
                 isLoading: action.bool
             }
-    }
-
-    if(state){
+        default: 
         return state;
     }
-
-    return state;
 }

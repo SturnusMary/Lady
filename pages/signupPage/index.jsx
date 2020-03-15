@@ -8,15 +8,18 @@ import {Botton} from '../../components/botton/botton';
 import {Social} from '../../components/social/social';
 import {LoginLink} from '../../components/loginLink/loginLink';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
+import {Redirect} from 'react-router-dom';
+import * as Actions from '../../actions/actions';
 
 class SignupPage extends React.Component {
     handleSubmit = (e) => {
+        const {inputName, inputUsername, inputEmailSignup, inputPasswordSignup, signUp} = this.props;
         e.preventDefault();
-        console.log(this.props);
+        signUp({name: inputName.value, username: inputUsername.value, email: inputEmailSignup.value, password: inputPasswordSignup.value});
     }
 
     render(){
-        const {inputEmailSignup, inputPasswordRep, inputName, inputUsername, inputPasswordSignup, valueHide} = this.props;
+        const {inputEmailSignup, inputPasswordRep, inputName, inputUsername, inputPasswordSignup, valueHide, auth, authError} = this.props;
         this.allValidated = false;
         this.validated = false;
         if(inputPasswordSignup.valid){
@@ -26,13 +29,15 @@ class SignupPage extends React.Component {
         if(inputName.valid && inputEmailSignup.valid && inputPasswordRep.valid && inputUsername.valid) {
             this.allValidated = true;
         }
-       
+        
+        if(auth.uid) return <Redirect to='/' />
         return (
             <React.Fragment>
                 <ScrollToTop />
                 <Header />
                 <main className='signupPage-content'>
                     <form onSubmit={this.handleSubmit}>
+                    {authError ? <p className='signInError'>{authError}</p> : null}
                         <Input 
                             name='inputName'
                             type='text'
@@ -80,7 +85,7 @@ class SignupPage extends React.Component {
     }
 }
 
-const mapStateToPropsSignupPage = (state) => {
+const mapStateToProps = (state) => {
     return {
         valueHide: state.loginPageR.valueHide,
         inputEmailSignup: state.signupPageR.inputEmailSignup,
@@ -88,10 +93,16 @@ const mapStateToPropsSignupPage = (state) => {
         inputPasswordRep: state.signupPageR.inputPasswordRep,
         inputName: state.signupPageR.inputName,
         inputUsername: state.signupPageR.inputUsername,
+        auth: state.firebaseR.auth,
+        authError: state.signupPageR.authError
     }
 }
-
-export default connect(mapStateToPropsSignupPage)(SignupPage);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        signUp: (newUser) => dispatch(Actions.signUp(newUser)),
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(SignupPage);
 
 SignupPage.propTypes = {
     valueHide: PropTypes.bool,
@@ -100,4 +111,7 @@ SignupPage.propTypes = {
     inputPasswordRep: PropTypes.object,
     inputName: PropTypes.object,
     inputUsername: PropTypes.object,
+    auth: PropTypes.object,
+    authError: PropTypes.string,
+    signUp: PropTypes.func
 };

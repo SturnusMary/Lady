@@ -1,0 +1,39 @@
+@import '../../auxiliaryStyle/variable.scss';
+@import '../../auxiliaryStyle/fonts.scss';
+@import '../../auxiliaryStyle/mixins.scss';
+
+.userPage-content {
+
+    .initials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+        background-color: $buttonSuccessColor;
+        color: white;
+        font-size: 27px;
+        margin-bottom: 25px;
+    }
+    .profile-data {
+        font-size: 13px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__block {
+            width: 80%;
+            margin-top: 15px;
+            border-bottom: 0.5px solid $formTextColor;
+            p {
+                color: $contentColor;
+                font-size: 16px;
+           
+            }
+        
+        }
+        
+    }
+}

@@ -21,8 +21,21 @@ footer {
         justify-content: space-around;
        
         &__icon {
+            position: relative;
             height: 26px;
-
+            .number {
+                display: flex;
+                justify-content: center;
+                width: 20px;
+                height: 20px;
+                background-color: $buttonSuccessColor;
+                border-radius: 50%;
+                position: absolute;
+                color: rgb(255, 255, 255);
+                font-size: 14px;
+                right: -10px;
+                bottom: 0;
+            }
             svg {
                 @include svg-stroke-static; 
             }

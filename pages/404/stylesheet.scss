@@ -9,6 +9,7 @@
     flex-direction: column;
     background: url('../../img/nm.svg') no-repeat center 37% / 65%;
     padding-bottom: 20%;
+    cursor: default;
     
     @media (min-width: 750px) and (max-width: 992px){
         background-size: 50%;
@@ -96,6 +97,7 @@
     }
 
     button {
+        cursor: pointer;
         color: #85DDF3;
         line-height: 30px;
         border-bottom: 2px solid #85DDF3;

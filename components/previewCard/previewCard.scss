@@ -105,11 +105,13 @@
                             margin-left: 5px;
                             font-size: 6px;
                             line-height: 11px;
+                            pointer-events: none;
                         }
-    
+                        
                         svg {
                             transition: all 0.4s;
                             fill: $formTextColor;
+                            pointer-events: none;
                         }
                     }
                   
@@ -173,4 +175,16 @@
     @media (min-width: 645px) and (max-width: 649px){
         margin-right: 5px;
     }
+}
+.save-button .svg-fill-selected path{
+    fill: #FA3572 !important;
+    stroke: #FA3572 !important; 
+}
+
+.save-button svg{
+    fill: none !important;
+    stroke:  $formTextColor;
+}
+.save-button:hover svg{
+    stroke:  $linkPinkColor !important;
 }

@@ -3,16 +3,15 @@ import {connect} from 'react-redux';
 import PropTypes from 'prop-types';
 import * as Actions from '../../actions/actions';
 import Header from '../../components/headerPart/index';
-import {TabBar} from '../../components/tabBar/index';
+import TabBar from '../../components/tabBar/index';
 import ScrollToTop from '../../components/scrollToTop/scrollToTop';
-import {PreviewCard} from '../../components/previewCard/previewCard';
+import PreviewCard from '../../components/previewCard/previewCard';
 import './stylesheet.scss';
 import bd from '../../bd.json';
 import {images} from '../../constants/pages';
 
 class CardPage extends React.Component {
     componentDidMount() {
-        console.log(this.props.match)
         let category = this.props.match.url.split('/')[1];
         let title = category[0].toUpperCase() + category.slice(1);
         let id = this.props.match.params.id.split('product')[1];
@@ -39,24 +38,23 @@ class CardPage extends React.Component {
     }
 }
 
-const mapStateToPropsCardPage = (state) => {
+const mapStateToProps = (state) => {
     return {
         objCard: state.cardPageR.objCard,
         titleCardH: state.cardPageR.titleCardH,
         imgBackCard: state.cardPageR.imgBackCard,
     }
 }
-
-const mapDispatchToPropsCardPage = (dispatch) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         setObjData: (...value) => dispatch(Actions.setObjData(...value)),
     }
 }
-
-export default connect(mapStateToPropsCardPage, mapDispatchToPropsCardPage)(CardPage);
+export default connect(mapStateToProps, mapDispatchToProps)(CardPage);
 
 CardPage.propTypes = {
     titleCardH: PropTypes.string,
     imgBackCard: PropTypes.string,
     setObjData: PropTypes.func,
+    objCard: PropTypes.object
 };

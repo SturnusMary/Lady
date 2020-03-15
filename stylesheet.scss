@@ -30,7 +30,6 @@ body, #root{
     height: 100vh;
     color: $formTextColor;
     -webkit-overflow-scrolling: touch;
-    // overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -43,7 +42,6 @@ a, button{
 
 .unsuitable {
     height: 100vh;
-    display: flex;
-    justify-content: center;
+    @include flex-jc-center;
     align-items: center;
 }

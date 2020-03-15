@@ -7,7 +7,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "ZS287"
         },
         {
             "id": "2",
@@ -16,7 +17,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "hyc11"
         },
         {
             "id": "3",
@@ -25,7 +27,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "6W56a"
         },
         {
             "id": "4",
@@ -34,7 +37,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "OE6a8"
         },
         {
             "id": "5",
@@ -43,7 +47,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "s54df"
         },
         {
             "id": "6",
@@ -52,7 +57,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "2Yb94"
         },
         {
             "id": "7",
@@ -61,7 +67,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Nr18e"
         },
         {
             "id": "8",
@@ -70,7 +77,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "7J0b0"
         },
         {
             "id": "9",
@@ -79,7 +87,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "tQ687"
         },
         {
             "id": "10",
@@ -88,7 +97,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "OWf2b"
         },
         {
             "id": "11",
@@ -97,7 +107,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "vicb1"
         },
         {
             "id": "12",
@@ -106,7 +117,8 @@
             "url": "Shoes1",
             "category": "shoes",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "sA003"
         }
     ],
 
@@ -118,7 +130,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Sr936"
         },
         {
             "id": "2",
@@ -127,7 +140,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "en737"
         },
         {
             "id": "3",
@@ -136,7 +150,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "XTa5e"
         },
         {
             "id": "4",
@@ -145,7 +160,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Hrbf3"
         },
         {
             "id": "5",
@@ -154,7 +170,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "fB454"
         },
         {
             "id": "6",
@@ -163,7 +180,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "cz582"
         },
         {
             "id": "7",
@@ -172,7 +190,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "ry0ae"
         },
         {
             "id": "8",
@@ -181,7 +200,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "WP62c"
         },
         {
             "id": "9",
@@ -190,7 +210,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "MD62f"
         },
         {
             "id": "10",
@@ -199,7 +220,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "zg7fd"
         },
         {
             "id": "11",
@@ -208,7 +230,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "pRf95"
         },
         {
             "id": "12",
@@ -217,7 +240,8 @@
             "url": "Shoes1",
             "category": "bags",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "3ub9d"
         }
     ],
 
@@ -229,7 +253,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "oY142"
         },
         {
             "id": "2",
@@ -238,7 +263,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "KK6ff"
         },
         {
             "id": "3",
@@ -247,7 +273,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "su04c"
         },
         {
             "id": "4",
@@ -256,7 +283,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "j3749"
         },
         {
             "id": "5",
@@ -265,7 +293,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "n3102"
         },
         {
             "id": "6",
@@ -274,7 +303,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "CGed0"
         },
         {
             "id": "7",
@@ -283,7 +313,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "vy534"
         },
         {
             "id": "8",
@@ -292,7 +323,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "YJad3"
         },
         {
             "id": "9",
@@ -301,7 +333,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "2V187"
         },
         {
             "id": "10",
@@ -310,7 +343,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Mb655"
         },
         {
             "id": "11",
@@ -319,7 +353,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Tp9a3"
         },
         {
             "id": "12",
@@ -328,7 +363,8 @@
             "url": "Shoes1",
             "category": "jewelry",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "5Y1f9"
         }
     ],
 
@@ -340,7 +376,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "gZa2c"
         },
         {
             "id": "2",
@@ -349,7 +386,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "o2961"
         },
         {
             "id": "3",
@@ -358,7 +396,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "aS558"
         },
         {
             "id": "4",
@@ -367,7 +406,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "qyf93"
         },
         {
             "id": "5",
@@ -376,7 +416,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "6aeab"
         },
         {
             "id": "6",
@@ -385,7 +426,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "60bd3"
         },
         {
             "id": "7",
@@ -394,7 +436,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "6hc3b"
         },
         {
             "id": "8",
@@ -403,7 +446,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "DG05f"
         },
         {
             "id": "9",
@@ -412,7 +456,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "OX2ea"
         },
         {
             "id": "10",
@@ -421,7 +466,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "qz7ef"
         },
         {
             "id": "11",
@@ -430,7 +476,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "52b4c"
         },
         {
             "id": "12",
@@ -439,7 +486,8 @@
             "url": "Shoes1",
             "category": "clothing",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "5e1bc"
         }
     ],
 
@@ -451,7 +499,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Xme2c"
         },
         {
             "id": "2",
@@ -460,7 +509,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "7Q26d"
         },
         {
             "id": "3",
@@ -469,7 +519,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "V7219"
         },
         {
             "id": "4",
@@ -478,7 +529,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "4K454"
         },
         {
             "id": "5",
@@ -487,7 +539,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Oja5d"
         },
         {
             "id": "6",
@@ -496,7 +549,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "CAf9c"
         },
         {
             "id": "7",
@@ -505,7 +559,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "ei2c6"
         },
         {
             "id": "8",
@@ -514,7 +569,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "lg06a"
         },
         {
             "id": "9",
@@ -523,7 +579,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "L5c7f"
         },
         {
             "id": "10",
@@ -532,7 +589,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "Dx0f1"
         },
         {
             "id": "11",
@@ -541,7 +599,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "lGdee"
         },
         {
             "id": "12",
@@ -550,7 +609,8 @@
             "url": "Shoes1",
             "category": "sports",
             "brand": "Brand",
-            "price": "Price"
+            "price": "Price",
+            "article": "xM345"
         }
     ]
 }
